@@ -144,7 +144,7 @@ function setupCertificateModal()
         !e.target.closest(".view-certificate-trigger")
       ) 
       {
-        e.preventDefault();
+        e.preventDefault(); 
       }
     });
   });
