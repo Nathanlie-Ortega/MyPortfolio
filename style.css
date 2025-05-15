@@ -99,7 +99,8 @@ html {
 }
 
 /* Navigation */
-nav {
+nav 
+{
   width: 100%;
   position: fixed;
   height: 10vh;
