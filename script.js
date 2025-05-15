@@ -369,22 +369,9 @@ function setupAnimatedBorders()
   // Colors are handled by CSS animations now
 }
 
-// Fix background image on iOS devices
-function fixIOSBackground() {
-  if (/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream) {
-    document.documentElement.style.height = '100vh';
-    document.body.style.height = '100vh';
-    document.body.style.webkitOverflowScrolling = 'touch';
-  }
-}
-
 // Initialize everything when DOM is loaded
 document.addEventListener("DOMContentLoaded", () => 
 {
-  // Fix for iOS background
-  fixIOSBackground();
-  
-  // Initialize all functions
   typeWriter();
   setupAnimations();
   setupMultiColorGlow();
