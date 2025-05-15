@@ -138,8 +138,9 @@ document.addEventListener("DOMContentLoaded", () =>
         },
         
         // OTHER SETTINGS
-        detectRetina: true, // Adjust for retina displays
-        background: {
+        detectRetina: true, // Adjust for retina displays 
+        background: 
+        {
           color: "transparent",
           image: "",
           position: "50% 50%",
@@ -147,7 +148,8 @@ document.addEventListener("DOMContentLoaded", () =>
           size: "cover",
         },
       })
-      .catch((error) => {
+      .catch((error) => 
+        {
         console.error("Error loading particles:", error)
       })
   }
