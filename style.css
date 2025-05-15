@@ -1541,23 +1541,28 @@ footer p
 @keyframes blink 
 {
   0%,
-  100% {
+  100% 
+  {
     opacity: 1;
   }
-  50% {
+  50% 
+  {
     opacity: 0;
   }
 }
 
 @keyframes gradient-flow
  {
-  0% {
+  0% 
+  {
     background-position: 0% 50%;
   }
-  50% {
+  50% 
+  {
     background-position: 100% 50%;
   }
-  100% {
+  100% 
+  {
     background-position: 0% 50%;
   }
 }
@@ -1565,55 +1570,66 @@ footer p
 /* Media Queries */
 @media (max-width: 884px) 
 {
-  .main-container {
+  .main-container 
+  {
     flex-direction: column-reverse;
     padding-top: 50px;
   }
 
-  .nav-container .links {
+  .nav-container .links
+   {
     display: none;
   }
 
-  .hamburg {
+  .hamburg
+   {
     display: block;
   }
 
-  .content {
+  .content 
+  {
     width: 90%;
     margin-top: 30px;
   }
 
-  .profile-container {
+  .profile-container 
+  {
     width: 80%;
     margin-bottom: 30px;
   }
 
-  .resume-btn {
+  .resume-btn
+   {
     margin: 20px auto;
   }
 
   .about-content,
   .skills-grid,
   .certificates-grid,
-  .projects-grid {
+  .projects-grid
+   {
     grid-template-columns: 1fr 1fr;
   }
 
-  .timeline::after {
+  .timeline::after 
+  {
     left: 31px;
   }
 
-  .timeline-item {
+  .timeline-item 
+  {
     width: 100%;
     padding-left: 70px;
     padding-right: 25px;
   }
 
-  .timeline-item:nth-child(even) {
+  .timeline-item:nth-child(even) 
+  {
     left: 0;
   }
 
-  .timeline-item::after {
+  .timeline-item::after 
+  {
     left: 21px;
   }
 }
@@ -1623,45 +1639,54 @@ footer p
   .about-content,
   .skills-grid,
   .certificates-grid,
-  .projects-grid {
+  .projects-grid 
+  {
     grid-template-columns: 1fr;
   }
 
-  .profile-container {
+  .profile-container 
+  {
     width: 100%;
   }
 
   .animated-border-outer,
   .animated-border-inner,
-  .profile-image {
+  .profile-image 
+  {
     width: 250px;
     height: 250px;
   }
 
-  .animated-border-outer {
+  .animated-border-outer
+   {
     width: 290px;
     height: 290px;
   }
 
-  .animated-border-inner {
+  .animated-border-inner
+   {
     width: 270px;
     height: 270px;
   }
 
-  .content {
+  .content 
+  {
     width: 100%;
   }
 
-  .social-icons {
+  .social-icons
+   {
     justify-content: center;
   }
 
-  .section-title h2 {
+  .section-title h2 
+  {
     font-size: 2rem;
   }
 
   /* Mobile hamburger menu styling */
-  .hamburg {
+  .hamburg 
+  {
     display: flex; 
     top: 15px;
     right: 20px;
@@ -1669,12 +1694,14 @@ footer p
     height: 45px;
   }
 
-  .dropdown .links a {
+  .dropdown .links a 
+  {
     padding: 15px 0;
     font-size: 1.2rem;
   }
 
-  .cancel {
+  .cancel 
+  {
     display: flex; 
     top: 15px;
     right: 20px;
@@ -1682,7 +1709,8 @@ footer p
     height: 45px;
   }
 
-  .about-text h3 {
+  .about-text h3 
+  {
     font-size: 1.5rem;
     white-space: normal;
   }
