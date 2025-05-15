@@ -347,9 +347,31 @@ function setupAnimatedBorders()
   // Colors are handled by CSS animations now
 }
 
+// NEW: Preloader function to handle the preloader
+function setupPreloader() {
+  // Hide preloader when everything is loaded
+  window.addEventListener('load', () => {
+    // Fade out the preloader
+    const preloader = document.getElementById('preloader');
+    if (preloader) {
+      preloader.style.opacity = '0';
+      preloader.style.transition = 'opacity 0.5s ease';
+      
+      // Remove it from the DOM after the fade out animation
+      setTimeout(() => {
+        preloader.style.display = 'none';
+      }, 500);
+    }
+  });
+}
+
 // Initialize everything when DOM is loaded
 document.addEventListener("DOMContentLoaded", () => 
-  {
+{
+  // Setup preloader first
+  setupPreloader();
+  
+  // Then initialize all other functions
   typeWriter();
   setupAnimations();
   setupMultiColorGlow();
@@ -361,6 +383,5 @@ document.addEventListener("DOMContentLoaded", () =>
   setupMoreTools();
   setupAnimatedBorders();
 
-  // Note: We've moved the particles setup to a separate file
-  // for better organization and troubleshooting
+
 });

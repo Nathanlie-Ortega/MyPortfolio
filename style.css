@@ -49,6 +49,61 @@
   --profile-color-2: #da837a;
 }
 
+
+
+
+/* Preloader */
+#preloader 
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-primary);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner 
+{
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  border-top-color: var(--color-2);
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin 
+{
+  to 
+  {
+    transform: rotate(360deg);
+  }
+}
+
+/* Body background is set immediately */
+body 
+{
+  background-color: var(--bg-primary);
+  width: 100%;
+  color: var(--text-primary);
+  background-image: url("backgroundImages/Background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+/* End Preloader */
+
+
+
+
 * 
 {
   padding: 0;
