@@ -2,7 +2,8 @@
 document.addEventListener("DOMContentLoaded", () => 
   {
 
-  if (typeof tsParticles !== "undefined") {
+  if (typeof tsParticles !== "undefined") 
+    {
     tsParticles
       .load("tsparticles",
          {
@@ -15,18 +16,22 @@ document.addEventListener("DOMContentLoaded", () =>
         fpsLimit: 60,    // Limit frames per second (lower for better performance)
         
         // PARTICLE APPEARANCE
-        particles: {
+        particles: 
+        {
           // NUMBER OF PARTICLES
-          number: {
+          number:
+           {
             value: 60,   // Total number of particles (adjust for density)
-            density: {
+            density: 
+            {
               enable: true,
               value_area: 800, // Higher = more spread out
             },
           },
           
           // PARTICLE COLORS
-          color: {
+          color: 
+          {
             // You can add/remove colors from this array
             value: ["#ffffff", "#ebf1f1", "#d8c9ff", "#c7568c", "#9d7fe8"],
           },
@@ -57,13 +62,15 @@ document.addEventListener("DOMContentLoaded", () =>
           },
           
           // PARTICLE SIZE
-          size: {
+          size: 
+          {
             value: { min: 2, max: 6 }, // Size range in pixels
             random: true, // Randomize size
           },
           
           // CONNECTING LINES
-          links: {
+          links: 
+          {
             enable: true,
             // Distance at which particles connect
             distance: 150,
@@ -76,7 +83,8 @@ document.addEventListener("DOMContentLoaded", () =>
           },
           
           // PARTICLE MOVEMENT
-          move: {
+          move: 
+          {
             enable: true,
             // Speed of movement
             speed: 2,
@@ -93,9 +101,11 @@ document.addEventListener("DOMContentLoaded", () =>
         },
         
         // INTERACTIVE BEHAVIOR
-        interactivity: {
+        interactivity:
+         {
           detectOn: "canvas", // Detect on "canvas" or "window"
-          events: {
+          events: 
+          {
             // Mouse hover behavior
             onHover: {
               enable: true,
@@ -108,16 +118,20 @@ document.addEventListener("DOMContentLoaded", () =>
             },
             resize: true, // Adjust on window resize
           },
-          modes: {
+          modes: 
+          {
             // Settings for grab mode (connect particles near mouse)
-            grab: {
+            grab: 
+            {
               distance: 180, // Connection distance
-              links: {
+              links: 
+              {
                 opacity: 0.8, // Connection opacity
               },
             },
             // Settings for push mode (add particles on click)
-            push: {
+            push: 
+            {
               quantity: 6, // Number of particles to add
             },
           },
