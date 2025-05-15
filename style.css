@@ -1363,7 +1363,7 @@ section#home
 .modal-content 
 {
   background-color: var(--bg-primary);
-  margin: 5% auto;
+  margin: 11% auto;
   padding: 20px;
   border: 2px solid var(--border-color);
   border-radius: 10px;
