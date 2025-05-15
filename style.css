@@ -998,7 +998,8 @@ section#home
 
 
 /* Skills Section */
-.skills-grid {
+.skills-grid 
+{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
@@ -1006,7 +1007,8 @@ section#home
   margin-top: 20px;
 }
 
-.skill-card {
+.skill-card 
+{
   background-color: var(--card-bg);
   padding: 15px;
   border-radius: 8px;
@@ -1020,113 +1022,133 @@ section#home
 }
 
 /* C++ Skill Card */
-.skill-card:nth-child(1) {
+.skill-card:nth-child(1)
+{
   background-image: url("skillsImages/C++B.jpg");
 }
 
 /* C# Skill Card */
-.skill-card:nth-child(2) {
+.skill-card:nth-child(2) 
+{
   background-image: url("skillsImages/C2B.jpg");
 }
 
 /* React Skill Card */
-.skill-card:nth-child(3) {
+.skill-card:nth-child(3) 
+{
   background-image: url("skillsImages/ReactB.jpg");
 }
 
 /* Node.js Skill Card */
-#additional-skills .skill-card:nth-child(1) {
+#additional-skills .skill-card:nth-child(1) 
+{
   background-image: url("paper.gif");
   background-color: #035339;
 }
 
 /* JavaScript Skill Card */
-#additional-skills .skill-card:nth-child(2) {
+#additional-skills .skill-card:nth-child(2)
+ {
   background-image: url("skillsImages/JavaScriptB.jpg");
 }
 
 /* CSS Skill Card */
-#additional-skills .skill-card:nth-child(3) {
+#additional-skills .skill-card:nth-child(3) 
+{
   background-image: url("paper.gif");
   background-color: #8d8989;
 }
 
 /* C Skill Card */
-#additional-skills .skill-card:nth-child(4) {
+#additional-skills .skill-card:nth-child(4)
+ {
   background-image: url("paper.gif");
   background-color: #20125c;
 }
 
 /* Python Skill Card */
-#additional-skills .skill-card:nth-child(5) {
+#additional-skills .skill-card:nth-child(5)
+ {
   background-image: url("paper.gif");
   background-color: #4d9dec;
 }
 
 /* Java Skill Card */
-#additional-skills .skill-card:nth-child(6) {
+#additional-skills .skill-card:nth-child(6) 
+{
   background-image: url("paper.gif");
   background-color: #2b2f33;
 }
 
 /* HTML Skill Card */
-#additional-skills .skill-card:nth-child(7) {
+#additional-skills .skill-card:nth-child(7)
+ {
   background-image: url("paper.gif");
   background-color: #ce6809;
 }
 
 /* Git Skill Card */
-#tools-tech .skill-card:nth-child(1) {
+#tools-tech .skill-card:nth-child(1) 
+{
   background-image: url("paper.gif");
   background-color: #24292e;
 }
 
 /* Visual Studio Code Skill Card */
-#tools-tech .skill-card:nth-child(2) {
+#tools-tech .skill-card:nth-child(2)
+ {
   background-image: url("paper.gif");
   background-color: #11476b;
 }
 
 /* GitHub Skill Card */
-#tools-tech .skill-card:nth-child(3) {
+#tools-tech .skill-card:nth-child(3)
+ {
   background-image: url("paper.git");
   background-color: #7266b1;
 }
 
 /* Microsoft SQL Skill Card */
-#additional-tools .skill-card:nth-child(1) {
+#additional-tools .skill-card:nth-child(1)
+ {
   background-image: url("paper.git");
   background-color: #6b5c5c;
 }
 
 /* Jenzabar Skill Card */
-#additional-tools .skill-card:nth-child(2) {
+#additional-tools .skill-card:nth-child(2)
+ {
   background-image: url("paper.git");
   background-color: #1e6492;
 }
 
 /* Mitel Skill Card */
-#additional-tools .skill-card:nth-child(3) {
+#additional-tools .skill-card:nth-child(3)
+{
   background-image: url("paper.git");
   background-color: #346bca;
 }
 
-.skill-card:hover {
+.skill-card:hover 
+{
   transform: scale(1.1) translateY(-5px);
   box-shadow: 0 10px 20px var(--shadow-color);
 }
 
-.skill-icon {
+.skill-icon 
+{
   width: 60px;
   margin: 0 auto;
   padding: 5px 0;
 }
 
-.skill-icon img {
+.skill-icon img 
+{
   width: 100%;
 }
 
-.skill-card p {
+.skill-card p 
+{
   margin-top: 5px;
   color: var(--text-primary);
   font-weight: 500;
