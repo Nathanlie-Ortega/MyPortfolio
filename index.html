@@ -7,45 +7,15 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Load tsParticles directly from CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
 
-
-    <!-- Preloader for <head> section -->
+    <!-- Preload critical resources -->
     <link rel="preload" href="backgroundImages/Background.jpg" as="image">
     <link rel="preload" href="style.css" as="style">
-    <style>
-
-    :root {
-        --bg-primary: #1a0b2e;
-    }
-    body {
-        background-color: #1a0b2e;
-        margin: 0;
-        padding: 0;
-    }
-    #preloader {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: #1a0b2e;
-        z-index: 9999;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    </style>
+    
+    <!-- Load tsParticles directly from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
 </head>
 <body>
-
-    <!-- Preloader -->
-    <div id="preloader">
-    <div class="spinner"></div>
-    </div>
-
-
     <!-- tsParticles container -->
     <div id="tsparticles"></div>
     
