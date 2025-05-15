@@ -1,5 +1,6 @@
 // Helper function to scroll to a section
-function scrollToSection(sectionId) {
+function scrollToSection(sectionId) 
+{
   const section = document.getElementById(sectionId);
   if (section) {
     section.scrollIntoView({ behavior: 'smooth' });
@@ -7,7 +8,8 @@ function scrollToSection(sectionId) {
 }
 
 // Mobile Menu Functions
-function hamburg() {
+function hamburg() 
+{
   const navbar = document.querySelector(".dropdown");
   navbar.style.transform = "translateY(0px)";
 }
@@ -24,25 +26,34 @@ let charIndex = 0;
 let isDeleting = false;
 let typingSpeed = 100;
 
-function typeWriter() {
+function typeWriter() 
+{
   const typewriterElement = document.querySelector(".typewriter-text");
   const currentText = texts[textIndex % texts.length];
 
-  if (isDeleting) {
+  if (isDeleting) 
+    {
     typewriterElement.textContent = currentText.substring(0, charIndex - 1);
     charIndex--;
     typingSpeed = 50;
-  } else {
+  } 
+  
+  else 
+  {
     typewriterElement.textContent = currentText.substring(0, charIndex + 1);
     charIndex++;
     typingSpeed = 100;
   }
 
-  if (!isDeleting && charIndex === currentText.length) {
+  if (!isDeleting && charIndex === currentText.length)
+     {
     // Pause at end of typing
     isDeleting = true;
     typingSpeed = 1000;
-  } else if (isDeleting && charIndex === 0) {
+  } 
+  
+  else if (isDeleting && charIndex === 0)
+     {
     isDeleting = false;
     textIndex++;
     // Pause before typing next
@@ -304,7 +315,8 @@ function setupAnimatedBorders() {
 }
 
 // Initialize everything when DOM is loaded
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => 
+  {
   typeWriter();
   setupAnimations();
   setupMultiColorGlow();
