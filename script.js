@@ -2,7 +2,8 @@
 function scrollToSection(sectionId) 
 {
   const section = document.getElementById(sectionId);
-  if (section) {
+  if (section) 
+    {
     section.scrollIntoView({ behavior: 'smooth' });
   }
 }
@@ -115,7 +116,8 @@ function setupMultiColorGlow() {
 }
 
 // Certificate Modal Functionality
-function setupCertificateModal() {
+function setupCertificateModal() 
+{
   const viewCertificateTriggers = document.querySelectorAll(".view-certificate, .view-certificate-trigger");
   const modal = document.getElementById("certificate-modal");
   const modalTitle = document.getElementById("modal-title");
@@ -125,22 +127,28 @@ function setupCertificateModal() {
 
   // Prevent certificate card click from opening modal
   const certificateCards = document.querySelectorAll(".certificate-card");
-  certificateCards.forEach((card) => {
-    card.addEventListener("click", (e) => {
+  certificateCards.forEach((card) => 
+    {
+    card.addEventListener("click", (e) => 
+      {
       // Only prevent default if it's not a trigger element
-      if (
+      if 
+      (
         !e.target.classList.contains("view-certificate") &&
         !e.target.classList.contains("view-certificate-trigger") &&
         !e.target.closest(".view-certificate-trigger")
-      ) {
+      ) 
+      {
         e.preventDefault();
       }
     });
   });
 
   // Setup view certificate triggers
-  viewCertificateTriggers.forEach((trigger) => {
-    trigger.addEventListener("click", (e) => {
+  viewCertificateTriggers.forEach((trigger) => 
+    {
+    trigger.addEventListener("click", (e) => 
+      {
       e.stopPropagation();
       const certificateFile = trigger.getAttribute("data-certificate");
       const card = trigger.closest(".certificate-card");
@@ -154,20 +162,24 @@ function setupCertificateModal() {
   });
 
   // Prevent credential links from opening modal
-  credentialLinks.forEach((link) => {
-    link.addEventListener("click", (e) => {
+  credentialLinks.forEach((link) => 
+    {
+    link.addEventListener("click", (e) => 
+      {
       e.stopPropagation();
     });
   });
 
   // Close modal when clicking the X
-  closeModal.addEventListener("click", () => {
+  closeModal.addEventListener("click", () => 
+    {
     modal.style.display = "none";
     document.body.style.overflow = "auto"; // Re-enable scrolling
   });
 
   // Close modal when clicking outside the content
-  window.addEventListener("click", (event) => {
+  window.addEventListener("click", (event) => 
+    {
     if (event.target === modal) {
       modal.style.display = "none";
       document.body.style.overflow = "auto";
@@ -253,7 +265,8 @@ function setupMoreCertificates() {
     lessCertificatesContainer.classList.remove("hidden");
   });
 
-  lessCertificatesBtn.addEventListener("click", () => {
+  lessCertificatesBtn.addEventListener("click", () =>
+     {
     additionalCertificates.classList.add("hidden");
     moreCertificatesBtn.parentElement.classList.remove("hidden");
     lessCertificatesContainer.classList.add("hidden");
@@ -263,19 +276,22 @@ function setupMoreCertificates() {
 }
 
 // More Skills Functionality
-function setupMoreSkills() {
+function setupMoreSkills() 
+{
   const moreSkillsBtn = document.getElementById("more-skills-btn");
   const lessSkillsBtn = document.getElementById("less-skills-btn");
   const additionalSkills = document.getElementById("additional-skills");
   const lessSkillsContainer = document.getElementById("less-skills-container");
 
-  moreSkillsBtn.addEventListener("click", () => {
+  moreSkillsBtn.addEventListener("click", () => 
+    {
     additionalSkills.classList.remove("hidden");
     moreSkillsBtn.parentElement.classList.add("hidden");
     lessSkillsContainer.classList.remove("hidden");
   });
 
-  lessSkillsBtn.addEventListener("click", () => {
+  lessSkillsBtn.addEventListener("click", () => 
+    {
     additionalSkills.classList.add("hidden");
     moreSkillsBtn.parentElement.classList.remove("hidden");
     lessSkillsContainer.classList.add("hidden");
@@ -291,13 +307,15 @@ function setupMoreTools() {
   const additionalTools = document.getElementById("additional-tools");
   const lessToolsContainer = document.getElementById("less-tools-container");
 
-  moreToolsBtn.addEventListener("click", () => {
+  moreToolsBtn.addEventListener("click", () => 
+    {
     additionalTools.classList.remove("hidden");
     moreToolsBtn.parentElement.classList.add("hidden");
     lessToolsContainer.classList.remove("hidden");
   });
 
-  lessToolsBtn.addEventListener("click", () => {
+  lessToolsBtn.addEventListener("click", () => 
+    {
     additionalTools.classList.add("hidden");
     moreToolsBtn.parentElement.classList.remove("hidden");
     lessToolsContainer.classList.add("hidden");
