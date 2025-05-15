@@ -1,146 +1,145 @@
-// particles-config.js - Updated with multiple shapes and detailed comments
-document.addEventListener("DOMContentLoaded", () => 
-  {
-
-  if (typeof tsParticles !== "undefined") 
-    {
+// particles-config.js - Fixed to only have nearby particles follow cursor
+document.addEventListener("DOMContentLoaded", () => {
+  if (typeof tsParticles !== "undefined") {
     tsParticles
-      .load("tsparticles",
-         {
+      .load("tsparticles", {
         // PERFORMANCE SETTINGS
-        fullScreen: 
-        {
-          enable: false, // Set to true to cover the entire screen
-          zIndex: -1,    // Keep particles behind content
+        fullScreen: {
+          enable: true, // Cover the entire screen
+          zIndex: -1,   // Keep particles behind content
         },
-        fpsLimit: 60,    // Limit frames per second (lower for better performance)
+        fpsLimit: 60,   // Limit frames per second
         
         // PARTICLE APPEARANCE
-        particles: 
-        {
+        particles: {
           // NUMBER OF PARTICLES
-          number:
-           {
-            value: 60,   // Total number of particles (adjust for density)
-            density: 
-            {
+          number: {
+            value: 70,   // Slightly increased number of particles
+            density: {
               enable: true,
-              value_area: 800, // Higher = more spread out
+              value_area: 800,
             },
           },
           
-          // PARTICLE COLORS
-          color: 
-          {
-            // You can add/remove colors from this array
-            value: ["#ffffff", "#ebf1f1", "#d8c9ff", "#c7568c", "#9d7fe8"],
+          // PARTICLE COLORS - Brighter colors
+          color: {
+            // Enhanced color palette with brighter colors
+            value: ["#ffffff", "#f8f8ff", "#e6e6fa", "#ffc0cb", "#add8e6", "#d8c9ff", "#c7568c", "#9d7fe8"],
           },
           
           // PARTICLE SHAPES
-          shape: 
-          {
-            // Available shapes: "circle", "square", "triangle", "polygon", "star"
-            type: ["circle", "triangle", "polygon", "star"],
+          shape: {
+            // Available shapes with more variety
+            type: ["circle", "triangle", "polygon", "star", "square"],
             // Options for polygon shape
-            polygon: 
-            {
-              sides: 5, // Pentagon
+            polygon: {
+              sides: 6, // Hexagon
             },
             // Options for star shape
-            star: 
-            {
+            star: {
               sides: 5,
               inset: 2
             },
           },
           
-          // PARTICLE OPACITY
-          opacity: 
-          {
-            value: 0.6,  // Base opacity (0 to 1)
-            random: true, // Randomize opacity
+          // PARTICLE OPACITY - Increased for brightness
+          opacity: {
+            value: 0.8,  // Increased base opacity (was 0.6)
+            random: true,
+            anim: {
+              enable: true,
+              speed: 1,
+              opacity_min: 0.4,
+              sync: false
+            }
           },
           
-          // PARTICLE SIZE
-          size: 
-          {
-            value: { min: 2, max: 6 }, // Size range in pixels
-            random: true, // Randomize size
+          // PARTICLE SIZE - Increased for larger particles
+          size: {
+            value: { min: 3, max: 8 }, // Larger size range (was 2-6)
+            random: true,
+            anim: {
+              enable: true,
+              speed: 2,
+              size_min: 2,
+              sync: false
+            }
           },
           
-          // CONNECTING LINES
-          links: 
-          {
+          // GLOW EFFECT
+          shadow: {
             enable: true,
-            // Distance at which particles connect
+            color: "#9d7fe8",
+            blur: 5,
+            offset: {
+              x: 0,
+              y: 0
+            }
+          },
+          
+          // CONNECTING LINES - Brighter and more visible
+          links: {
+            enable: true,
             distance: 150,
-            // Line color
             color: "#ffffff",
-            // Line opacity
-            opacity: 0.4,
-            // Line width in pixels
-            width: 1.5,
+            opacity: 0.5, // Increased opacity
+            width: 1.8,   // Thicker lines
           },
           
           // PARTICLE MOVEMENT
-          move: 
-          {
+          move: {
             enable: true,
-            // Speed of movement
-            speed: 2,
-            // Direction: "none", "top", "bottom", "left", "right"
+            speed: 2.5,   // Slightly faster movement
             direction: "none",
-            // Random movement
             random: true,
-            // Straight lines or not
             straight: false,
-            // What happens at the edge: "out", "bounce"
             outMode: "out",
             bounce: false,
+            // Removed the attract setting that was causing all particles to be affected
           },
         },
         
-        // INTERACTIVE BEHAVIOR
-        interactivity:
-         {
-          detectOn: "canvas", // Detect on "canvas" or "window"
-          events: 
-          {
-            // Mouse hover behavior
+        // INTERACTIVE BEHAVIOR - Fixed to only affect nearby particles
+        interactivity: {
+          detectOn: "canvas",
+          events: {
             onHover: {
               enable: true,
-              mode: "grab", // "grab", "bubble", "repulse", "connect"
+              mode: "grab", // Only grab nearby particles
+              // Removed parallax effect that was causing all particles to move
             },
-            // Click behavior
             onClick: {
               enable: true,
-              mode: "push", // "push", "remove", "bubble", "repulse"
+              mode: "push",
             },
-            resize: true, // Adjust on window resize
+            resize: true,
           },
-          modes: 
-          {
-            // Settings for grab mode (connect particles near mouse)
-            grab: 
-            {
-              distance: 180, // Connection distance
-              links: 
-              {
-                opacity: 0.8, // Connection opacity
+          modes: {
+            // Grab mode - only connects nearby particles with lines
+            grab: {
+              distance: 150, // Only particles within this distance will be affected
+              links: {
+                opacity: 1,  // Full opacity on hover
+                color: "#c7568c", // Highlight color
               },
             },
-            // Settings for push mode (add particles on click)
-            push: 
-            {
-              quantity: 6, // Number of particles to add
+            // Push mode - adds particles on click
+            push: {
+              quantity: 8, // More particles added on click
             },
+            // Bubble mode - enlarges nearby particles on hover
+            bubble: {
+              distance: 150, // Only affects particles within this distance
+              size: 12,
+              duration: 2,
+              opacity: 0.8
+            }
           },
         },
         
         // OTHER SETTINGS
-        detectRetina: true, // Adjust for retina displays 
-        background: 
-        {
+        detectRetina: true,
+        background: {
           color: "transparent",
           image: "",
           position: "50% 50%",
@@ -148,8 +147,7 @@ document.addEventListener("DOMContentLoaded", () =>
           size: "cover",
         },
       })
-      .catch((error) => 
-        {
+      .catch((error) => {
         console.error("Error loading particles:", error)
       })
   }
