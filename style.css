@@ -1363,7 +1363,7 @@ section#home
 .modal-content 
 {
   background-color: var(--bg-primary);
-  margin: 11% auto;
+  margin: 28% auto; /* default for mobile */
   padding: 20px;
   border: 2px solid var(--border-color);
   border-radius: 10px;
@@ -1372,6 +1372,15 @@ section#home
   position: relative;
   box-shadow: 0 0 20px var(--btn-shadow);
 }
+
+/* For desktop viewpoint*/
+@media (min-width: 768px) 
+{
+  .modal-content {
+    margin: 11% auto;
+  }
+}
+
 
 .close-modal 
 {
