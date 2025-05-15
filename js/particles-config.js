@@ -1,10 +1,14 @@
 // particles-config.js - Updated with multiple shapes and detailed comments
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => 
+  {
+
   if (typeof tsParticles !== "undefined") {
     tsParticles
-      .load("tsparticles", {
+      .load("tsparticles",
+         {
         // PERFORMANCE SETTINGS
-        fullScreen: {
+        fullScreen: 
+        {
           enable: false, // Set to true to cover the entire screen
           zIndex: -1,    // Keep particles behind content
         },
@@ -28,22 +32,26 @@ document.addEventListener("DOMContentLoaded", () => {
           },
           
           // PARTICLE SHAPES
-          shape: {
+          shape: 
+          {
             // Available shapes: "circle", "square", "triangle", "polygon", "star"
             type: ["circle", "triangle", "polygon", "star"],
             // Options for polygon shape
-            polygon: {
+            polygon: 
+            {
               sides: 5, // Pentagon
             },
             // Options for star shape
-            star: {
+            star: 
+            {
               sides: 5,
               inset: 2
             },
           },
           
           // PARTICLE OPACITY
-          opacity: {
+          opacity: 
+          {
             value: 0.6,  // Base opacity (0 to 1)
             random: true, // Randomize opacity
           },
