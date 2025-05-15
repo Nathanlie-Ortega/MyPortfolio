@@ -1,3 +1,15 @@
+// Prevent overscroll/bounce effect on mobile
+document.addEventListener('touchmove', function(event) {
+  if (event.touches.length > 1) {
+    event.preventDefault();
+  }
+}, { passive: false });
+
+// Prevent pinch zoom
+document.addEventListener('gesturestart', function(event) {
+  event.preventDefault();
+});
+
 // Helper function to scroll to a section
 function scrollToSection(sectionId) 
 {
@@ -30,6 +42,8 @@ let typingSpeed = 100;
 function typeWriter() 
 {
   const typewriterElement = document.querySelector(".typewriter-text");
+  if (!typewriterElement) return; // Safety check
+  
   const currentText = texts[textIndex % texts.length];
 
   if (isDeleting) 
@@ -246,6 +260,8 @@ function setupMoreProjects()
   const additionalProjects = document.getElementById("additional-projects");
   const lessProjectsContainer = document.getElementById("less-projects-container");
 
+  if (!moreProjectsBtn || !lessProjectsBtn || !additionalProjects || !lessProjectsContainer) return;
+
   moreProjectsBtn.addEventListener("click", () => 
     {
     additionalProjects.classList.remove("hidden");
@@ -270,6 +286,8 @@ function setupMoreCertificates()
   const lessCertificatesBtn = document.getElementById("less-certificates-btn");
   const additionalCertificates = document.getElementById("additional-certificates");
   const lessCertificatesContainer = document.getElementById("less-certificates-container");
+
+  if (!moreCertificatesBtn || !lessCertificatesBtn || !additionalCertificates || !lessCertificatesContainer) return;
 
   moreCertificatesBtn.addEventListener("click", () => 
     {
@@ -296,6 +314,8 @@ function setupMoreSkills()
   const additionalSkills = document.getElementById("additional-skills");
   const lessSkillsContainer = document.getElementById("less-skills-container");
 
+  if (!moreSkillsBtn || !lessSkillsBtn || !additionalSkills || !lessSkillsContainer) return;
+
   moreSkillsBtn.addEventListener("click", () => 
     {
     additionalSkills.classList.remove("hidden");
@@ -320,6 +340,8 @@ function setupMoreTools()
   const lessToolsBtn = document.getElementById("less-tools-btn");
   const additionalTools = document.getElementById("additional-tools");
   const lessToolsContainer = document.getElementById("less-tools-container");
+
+  if (!moreToolsBtn || !lessToolsBtn || !additionalTools || !lessToolsContainer) return;
 
   moreToolsBtn.addEventListener("click", () => 
     {
@@ -347,9 +369,22 @@ function setupAnimatedBorders()
   // Colors are handled by CSS animations now
 }
 
+// Fix background image on iOS devices
+function fixIOSBackground() {
+  if (/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream) {
+    document.documentElement.style.height = '100vh';
+    document.body.style.height = '100vh';
+    document.body.style.webkitOverflowScrolling = 'touch';
+  }
+}
+
 // Initialize everything when DOM is loaded
 document.addEventListener("DOMContentLoaded", () => 
-  {
+{
+  // Fix for iOS background
+  fixIOSBackground();
+  
+  // Initialize all functions
   typeWriter();
   setupAnimations();
   setupMultiColorGlow();

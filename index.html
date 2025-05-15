@@ -2,16 +2,39 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Nathanlie Ortega | Portfolio</title>
+    
+    <!-- Critical styles to prevent flash and set background immediately -->
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            background-color: #1a0b2e;
+            width: 100%;
+            height: 100%;
+            overflow-x: hidden;
+            position: relative;
+        }
+        
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("backgroundImages/Background.jpg");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            z-index: -2;
+        }
+    </style>
+    
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- Preload critical resources -->
-    <link rel="preload" href="backgroundImages/Background.jpg" as="image">
-    <link rel="preload" href="style.css" as="style">
-
     <!-- Load tsParticles directly from CDN -->
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
 </head>
@@ -50,661 +73,663 @@
         </div>
     </nav>
 
-    <!-- Hero Banner Section -->
-    <section id="home">
-        <div class="main-container">
-            <div class="content animated fade-right">
-                <h1 class="multi-color-glow">Hello,</h1>
-                <h2 class="name-container animated fade-up" data-delay="200">I am <span class="name-highlight">Nathanlie</span></h2>
-                <div class="typewriter animated zoom-in" data-delay="400">
-                    An aspiring <span class="typewriter-text"></span><span class="cursor">|</span>
+    <div class="page-wrapper">
+        <!-- Hero Banner Section -->
+        <section id="home">
+            <div class="main-container">
+                <div class="content animated fade-right">
+                    <h1 class="multi-color-glow">Hello,</h1>
+                    <h2 class="name-container animated fade-up" data-delay="200">I am <span class="name-highlight">Nathanlie</span></h2>
+                    <div class="typewriter animated zoom-in" data-delay="400">
+                        An aspiring <span class="typewriter-text"></span><span class="cursor">|</span>
+                    </div>
+                    
+                    <!-- Social Media Links -->
+                    <div class="social-icons animated fade-up" data-delay="500">
+                        <a href="https://www.linkedin.com/in/nathanlie-ortega-a71359222/" target="_blank" title="LinkedIn">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/Nathanlie-Ortega" target="_blank" title="GitHub">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="mailto:nathanlieortega.dev@gmail.com" title="Email">
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
+                    </div>
+                    
+                    <a href="/resume/resume.pdf" download class="resume-btn animated zoom-in" data-delay="600">
+                        <i class="fa-solid fa-download"></i> Download Resume
+                    </a>
+                    <!-- Insert your resume.pdf here -->
                 </div>
-                
-                <!-- Social Media Links -->
-                <div class="social-icons animated fade-up" data-delay="500">
-                    <a href="https://www.linkedin.com/in/nathanlie-ortega-a71359222/" target="_blank" title="LinkedIn">
-                        <i class="fa-brands fa-linkedin"></i>
-                    </a>
-                    <a href="https://github.com/Nathanlie-Ortega" target="_blank" title="GitHub">
-                        <i class="fa-brands fa-github"></i>
-                    </a>
-                    <a href="mailto:nathanlieortega.dev@gmail.com" title="Email">
-                        <i class="fa-solid fa-envelope"></i>
-                    </a>
+                <div class="profile-container animated fade-left" data-delay="200">
+                    <div class="animated-border-outer"></div>
+                    <div class="animated-border-inner"></div>
+                    <div class="profile-image">
+                        <!-- Insert your profile pic .jpg or .png here -->
+                        <img src="/images/IDp.jpg" alt="Nathanlie Ortega">
+                    </div>
                 </div>
-                
-                <a href="/resume/resume.pdf" download class="resume-btn animated zoom-in" data-delay="600">
-                    <i class="fa-solid fa-download"></i> Download Resume
-                </a>
-                <!-- Insert your resume.pdf here -->
             </div>
-            <div class="profile-container animated fade-left" data-delay="200">
-                <div class="animated-border-outer"></div>
-                <div class="animated-border-inner"></div>
-                <div class="profile-image">
-                    <!-- Insert your profile pic .jpg or .png here -->
-                    <img src="/images/IDp.jpg" alt="Nathanlie Ortega">
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Hero Banner Section-->
+        </section>
+        <!-- End Hero Banner Section-->
 
-    <!-- About Section with an implementation to merged About, Education, Experience -->
-    <section id="about" class="section">
-        <div class="container">
-            <div class="section-title animated fade-right center-align">
-                <h2 class="multi-color-glow">About</h2>
-                <p>Learn about my journey, education, and professional experiences.</p>
-            </div>
-            
-            <!-- About Me Subsection -->
-            <div class="subsection animated fade-up" data-delay="200" id="about-me">
-                <h3 class="subsection-title">About Me</h3>
-                <div class="about-content animated-border">
-                    <div class="about-text animated fade-right" data-delay="300">
-                        <h3>Welcome! I'm <span class="name-highlight">Nathanlie Ortega</span>. Feel free to explore my portfolio and discover the innovation and problem-solving mindset I bring to the world of technology and development.</h3>
-                    </div>
-                    <div class="about-description animated fade-left" data-delay="400">
-                        <p>
-                        I'm currently pursuing a Bachelor of Applied Arts and Sciences in Computer Science with a focus on front-end development, 
-                        software engineering, and cybersecurity. I specialize in building secure, high-performance web applications that prioritize 
-                        both user experience and scalability. Through hands-on personal projects, I've developed tailored solutions that meet real-world needs
-                        from intuitive, responsive user interfaces to reliable, maintainable back-end systems. 
-                        My work reflects a strong commitment to clean code, functionality, and data security.
-                        </p>
-                    </div>
+        <!-- About Section with an implementation to merged About, Education, Experience -->
+        <section id="about" class="section">
+            <div class="container">
+                <div class="section-title animated fade-right center-align">
+                    <h2 class="multi-color-glow">About</h2>
+                    <p>Learn about my journey, education, and professional experiences.</p>
                 </div>
-            </div>
-            
-            <!-- Education Subsection -->
-            <div class="subsection animated fade-up" data-delay="500" id="education">
-                <h3 class="subsection-title">Education</h3>
-                <div class="timeline">
-                    <div class="timeline-item animated slide-right" data-delay="600">
-                        <div class="timeline-content animated-border">
-                            <h3>Bachelor of Applied Arts and Science in Computer Science</h3>
-                            <h4>University of North Texas</h4>
-                            <p class="timeline-date">2023 - Present</p>
-                            <p>Actively advancing my education while developing strong, real-world skills in software development, web design, programming, and IT support while fully prepared to contribute to fast-paced tech environments.</p>
+                
+                <!-- About Me Subsection -->
+                <div class="subsection animated fade-up" data-delay="200" id="about-me">
+                    <h3 class="subsection-title">About Me</h3>
+                    <div class="about-content animated-border">
+                        <div class="about-text animated fade-right" data-delay="300">
+                            <h3>Welcome! I'm <span class="name-highlight">Nathanlie Ortega</span>. Feel free to explore my portfolio and discover the innovation and problem-solving mindset I bring to the world of technology and development.</h3>
                         </div>
-                    </div>
-                    <div class="timeline-item animated slide-left" data-delay="700">
-                        <div class="timeline-content animated-border">
-                            <h3>Associate of Applied Science in Computer Information Systems & Technology</h3>
-                            <h4>North Central Texas College</h4>
-                            <p class="timeline-date">2021 - 2023</p>
-                            <p>Graduated with Summa Cum Laude. Specialized in IT support and networking.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Work Experience Subsection -->
-            <div class="subsection animated fade-up" data-delay="800" id="experience">
-                <h3 class="subsection-title">Work Experiences</h3> 
-                <div class="timeline">
-                    <div class="timeline-item experience-item animated slide-up" data-delay="900">
-                        <div class="timeline-content animated-border">
-                            <h3>User Support Specialist</h3>
-                            <h4>North Central Texas College</h4>
-                            <p class="experience-type">Internship</p>
-                            <p class="timeline-date">June 2023 - September 2023</p>
-                            <p class="experience-location">Corinth, Texas, United States</p> 
-                            <p class="experience-description">
-                            Provided IT support through student outreach, database management, and virtual machine configuration, while 
-                            gaining hands-on experience with Jenzabar, Microsoft Word, and Mitel Connect. Maintained precise documentation, 
-                            resolved technical issues, and contributed to process improvements with strong attention to detail.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="timeline-item experience-item animated slide-down" data-delay="1000"> 
-                        <div class="timeline-content animated-border">
-                            <h3>Appraiser Trainee</h3>
-                            <h4>Philip's Business Appraiser</h4> 
-                            <p class="experience-type">Apprenticeship</p>
-                            <p class="timeline-date">June 2021 - August 2021</p>
-                            <p class="experience-location">Frisco, Texas, United States</p>
-                            <p class="experience-description">
-                                Assisted in commercial and residential property appraisals by managing inspection plans, analyzing valuation data, 
-                                performing mathematical research, and utilizing Microsoft Office tools, while developing 
-                                skills in customer communication and project appraisal. 
+                        <div class="about-description animated fade-left" data-delay="400">
+                            <p>
+                            I'm currently pursuing a Bachelor of Applied Arts and Sciences in Computer Science with a focus on front-end development, 
+                            software engineering, and cybersecurity. I specialize in building secure, high-performance web applications that prioritize 
+                            both user experience and scalability. Through hands-on personal projects, I've developed tailored solutions that meet real-world needs
+                            from intuitive, responsive user interfaces to reliable, maintainable back-end systems. 
+                            My work reflects a strong commitment to clean code, functionality, and data security.
                             </p>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-    <!-- End About Section -->
-
-    <!-- Projects Section -->
-    <section id="projects" class="section">
-        <div class="container">
-            <div class="section-title animated fade-right center-align">
-                <h2 class="multi-color-glow">Projects</h2>
-                <p>Check out some of my recent projects below!</p>
-            </div>
-
-            <div class="projects-grid">
-
-                <!-- Showcasing the First 3 projects --> 
-                <div class="project-card animated slide-up animated-border" data-delay="100">
-                    <img src="projectsImages/SimCity.JPG" alt="SimCity">
-                    <div class="project-info">
-                        <h3>SimCity</h3>
-                        <p>Manages zones (residential, commercial, industrial), pollution, hospitals, and outputs final population and pollution data using C++ console.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/Nathanlie-Ortega/SimCity" class="project-link" target="_blank" rel="noopener noreferrer">
-                                <i class="fa-brands fa-github"></i>
-                            </a>
+                
+                <!-- Education Subsection -->
+                <div class="subsection animated fade-up" data-delay="500" id="education">
+                    <h3 class="subsection-title">Education</h3>
+                    <div class="timeline">
+                        <div class="timeline-item animated slide-right" data-delay="600">
+                            <div class="timeline-content animated-border">
+                                <h3>Bachelor of Applied Arts and Science in Computer Science</h3>
+                                <h4>University of North Texas</h4>
+                                <p class="timeline-date">2023 - Present</p>
+                                <p>Actively advancing my education while developing strong, real-world skills in software development, web design, programming, and IT support while fully prepared to contribute to fast-paced tech environments.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item animated slide-left" data-delay="700">
+                            <div class="timeline-content animated-border">
+                                <h3>Associate of Applied Science in Computer Information Systems & Technology</h3>
+                                <h4>North Central Texas College</h4>
+                                <p class="timeline-date">2021 - 2023</p>
+                                <p>Graduated with Summa Cum Laude. Specialized in IT support and networking.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="project-card animated slide-down animated-border" data-delay="200">
-                    <img src="projectsImages/LibraryManagement.JPG" alt="Library Management System">
-                    <div class="project-info">
-                        <h3>Library Management System</h3>
-                        <p>A C++ console app for managing a library system with books, CDs, DVDs, patrons, and loans with item management,  overdue tracking, and fine calculation.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/Nathanlie-Ortega/LibraryManagementSystem" class="project-link" target="_blank" rel="noopener noreferrer">
-                                <i class="fa-brands fa-github"></i>
-                            </a>
+                
+                <!-- Work Experience Subsection -->
+                <div class="subsection animated fade-up" data-delay="800" id="experience">
+                    <h3 class="subsection-title">Work Experiences</h3> 
+                    <div class="timeline">
+                        <div class="timeline-item experience-item animated slide-up" data-delay="900">
+                            <div class="timeline-content animated-border">
+                                <h3>User Support Specialist</h3>
+                                <h4>North Central Texas College</h4>
+                                <p class="experience-type">Internship</p>
+                                <p class="timeline-date">June 2023 - September 2023</p>
+                                <p class="experience-location">Corinth, Texas, United States</p> 
+                                <p class="experience-description">
+                                Provided IT support through student outreach, database management, and virtual machine configuration, while 
+                                gaining hands-on experience with Jenzabar, Microsoft Word, and Mitel Connect. Maintained precise documentation, 
+                                resolved technical issues, and contributed to process improvements with strong attention to detail.
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                </div>
-
-                <div class="project-card animated slide-right animated-border" data-delay="300">
-                    <img src="projectsImages/StudentRecordManagement.JPG" alt="StudentRecordManagementSystem">
-                    <div class="project-info">
-                        <h3>Student Record Management System</h3>
-                        <p>A C++ console app for managing student records with adding, removing, searching, and displaying functionality.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/Nathanlie-Ortega/StudentRecordManagementSystem" class="project-link" target="_blank" rel="noopener noreferrer">
-                                <i class="fa-brands fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- More Projects Button -->
-            <div class="more-projects-container">
-                <button id="more-projects-btn" class="more-projects-btn">
-                    <i class="fa-solid fa-plus"></i> More Projects
-                </button>
-            </div>
-
-            <!-- Hidden Projects  -->
-            <div id="additional-projects" class="projects-grid hidden">
-                <div class="project-card animated slide-left animated-border" data-delay="100">
-                    <img src="projectsImages/NumberGuessingGame.JPG" alt="NumberGuessingGame">
-                    <div class="project-info">
-                        <h3>Number Guessing Game</h3>
-                        <p>A C++ console app for a number guessing game with dynamic bounds and point tracking.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/Nathanlie-Ortega/NumberGuessingGame" class="project-link" target="_blank" rel="noopener noreferrer">
-                                <i class="fa-brands fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card animated slide-up animated-border" data-delay="200">
-                    <img src="projectsImages/SinglyLinkedList.JPG" alt="SinglyLinkedListImplementation"> 
-                    <div class="project-info">
-                        <h3>Singly Linked List Implementation</h3>
-                        <p>A C++ console app for managing a singly linked list with insert, search, and print functions.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/Nathanlie-Ortega/SinglyLinkedListImplementation" class="project-link" target="_blank" rel="noopener noreferrer">
-                                <i class="fa-brands fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card animated slide-down animated-border" data-delay="300">
-                    <img src="projectsImages/StudentExamGradesAnalyzer.JPG" alt="StudentExamGradesAnalyzer">
-                    <div class="project-info">
-                        <h3>Student Exam Grades Analyzer</h3>
-                        <p>A C++ console app for analyzing student grades with statistical calculations.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/Nathanlie-Ortega/StudentExamGradesAnalyzer" class="project-link" target="_blank" rel="noopener noreferrer">
-                                <i class="fa-brands fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card animated slide-right animated-border" data-delay="400">
-                    <img src="projectsImages/HashTable.JPG" alt="HashTable">
-                    <div class="project-info">
-                        <h3>Hash Table</h3>
-                        <p>A C++ console app for managing a hash table using linear probing and chaining with insert, search, delete, and display functionality.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/Nathanlie-Ortega/HashTable" class="project-link" target="_blank" rel="noopener noreferrer">
-                                <i class="fa-brands fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card animated slide-left animated-border" data-delay="500">
-                    <img src="projectsImages/GraphAdjacencyWalkAnalyzer.JPG" alt="GraphAdjacencyWalkAnalyzer">
-                    <div class="project-info">
-                        <h3>Graph Adjacency Walk Analyzer</h3>
-                        <p>A C++ console app for analyzing graph walks using adjacency lists with trail, path, and cycle validation.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/Nathanlie-Ortega/GraphAdjacencyWalkAnalyzer" class="project-link" target="_blank" rel="noopener noreferrer">
-                                <i class="fa-brands fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card animated slide-up animated-border" data-delay="600">
-                    <img src="https://via.placeholder.com/300x200" alt="Pomodoro Website Future Project">
-                    <div class="project-info">
-                        <h3>Pomodoro Website Future Project</h3>
-                        <p>Interactive data visualization dashboard for time management using the Pomodoro technique.</p>
-                        <div class="project-links">
-                            <a href="#" class="project-link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                            <a href="#" class="project-link"><i class="fa-brands fa-github"></i></a>
+                        <div class="timeline-item experience-item animated slide-down" data-delay="1000"> 
+                            <div class="timeline-content animated-border">
+                                <h3>Appraiser Trainee</h3>
+                                <h4>Philip's Business Appraiser</h4> 
+                                <p class="experience-type">Apprenticeship</p>
+                                <p class="timeline-date">June 2021 - August 2021</p>
+                                <p class="experience-location">Frisco, Texas, United States</p>
+                                <p class="experience-description">
+                                    Assisted in commercial and residential property appraisals by managing inspection plans, analyzing valuation data, 
+                                    performing mathematical research, and utilizing Microsoft Office tools, while developing 
+                                    skills in customer communication and project appraisal. 
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            <!-- Show Less Button -->
-            <div id="less-projects-container" class="more-projects-container hidden">
-                <button id="less-projects-btn" class="more-projects-btn">
-                    <i class="fa-solid fa-minus"></i> Show Less
-                </button>
-            </div>
-        </div>
-    </section>
-    <!-- End Projects Section-->
+        </section>
+        <!-- End About Section -->
 
-    <!-- Skills Section  -->
-    <section id="skills" class="section">
-        <div class="container">
-            <div class="section-title animated fade-right center-align">
-                <h2 class="multi-color-glow">Skills</h2>
-                <p>My technical skills, certifications, and tools that power my work.</p>
-            </div>
-            
-            <!-- Programming Languages & Frameworks Skills -->
-            <div class="subsection animated fade-up" data-delay="200" id="technical-skills">
-                <h3 class="subsection-title">Programming Languages & Frameworks</h3>
-                <div class="skills-grid">
-                    <!-- C++ Skill -->
-                    <div class="skill-card animated slide-down animated-border" data-delay="300">
-                        <div class="skill-icon">
-                            <img src="skillsImages/C++.png" alt="C++ icon">
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <div class="container">
+                <div class="section-title animated fade-right center-align">
+                    <h2 class="multi-color-glow">Projects</h2>
+                    <p>Check out some of my recent projects below!</p>
+                </div>
+
+                <div class="projects-grid">
+
+                    <!-- Showcasing the First 3 projects --> 
+                    <div class="project-card animated slide-up animated-border" data-delay="100">
+                        <img src="projectsImages/SimCity.jpg" alt="SimCity">
+                        <div class="project-info">
+                            <h3>SimCity</h3>
+                            <p>Manages zones (residential, commercial, industrial), pollution, hospitals, and outputs final population and pollution data using C++ console.</p>
+                            <div class="project-links">
+                                <a href="https://github.com/Nathanlie-Ortega/SimCity" class="project-link" target="_blank" rel="noopener noreferrer">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                            </div>
                         </div>
-                        <p>C++</p>
                     </div>
 
-                    <!-- C# Skill -->
-                    <div class="skill-card animated slide-down animated-border" data-delay="400">
-                        <div class="skill-icon">
-                            <img src="skillsImages/C2.png" alt="C# icon">
+                    <div class="project-card animated slide-down animated-border" data-delay="200">
+                        <img src="projectsImages/LibraryManagement.jpg" alt="Library Management System">
+                        <div class="project-info">
+                            <h3>Library Management System</h3>
+                            <p>A C++ console app for managing a library system with books, CDs, DVDs, patrons, and loans with item management,  overdue tracking, and fine calculation.</p>
+                            <div class="project-links">
+                                <a href="https://github.com/Nathanlie-Ortega/LibraryManagementSystem" class="project-link" target="_blank" rel="noopener noreferrer">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                            </div>
                         </div>
-                        <p>C#</p>
                     </div>
 
-                    <!-- React Skill -->
-                    <div class="skill-card animated slide-left animated-border" data-delay="500">
-                        <div class="skill-icon">
-                            <img src="skillsImages/React.png" alt="React icon">
+                    <div class="project-card animated slide-right animated-border" data-delay="300">
+                        <img src="projectsImages/StudentRecordManagement.JPG" alt="StudentRecordManagementSystem">
+                        <div class="project-info">
+                            <h3>Student Record Management System</h3>
+                            <p>A C++ console app for managing student records with adding, removing, searching, and displaying functionality.</p>
+                            <div class="project-links">
+                                <a href="https://github.com/Nathanlie-Ortega/StudentRecordManagementSystem" class="project-link" target="_blank" rel="noopener noreferrer">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                            </div>
                         </div>
-                        <p>React.js</p>
                     </div>
                 </div>
 
-                <!-- More Skills Button --> 
+                <!-- More Projects Button -->
                 <div class="more-projects-container">
-                    <button id="more-skills-btn" class="more-projects-btn">
-                        <i class="fa-solid fa-plus"></i> More Skills
+                    <button id="more-projects-btn" class="more-projects-btn">
+                        <i class="fa-solid fa-plus"></i> More Projects
                     </button>
                 </div>
 
-                <!-- Hidden Skills -->
-                <div id="additional-skills" class="skills-grid hidden">
-                    <!-- Node.JS Skill -->
-                    <div class="skill-card animated slide-up animated-border" data-delay="100">
-                        <div class="skill-icon">
-                            <img src="skillsImages/NodeJS.png" alt="NodeJS icon">
+                <!-- Hidden Projects  -->
+                <div id="additional-projects" class="projects-grid hidden">
+                    <div class="project-card animated slide-left animated-border" data-delay="100">
+                        <img src="projectsImages/NumberGuessingGame.JPG" alt="NumberGuessingGame">
+                        <div class="project-info">
+                            <h3>Number Guessing Game</h3>
+                            <p>A C++ console app for a number guessing game with dynamic bounds and point tracking.</p>
+                            <div class="project-links">
+                                <a href="https://github.com/Nathanlie-Ortega/NumberGuessingGame" class="project-link" target="_blank" rel="noopener noreferrer">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                            </div>
                         </div>
-                        <p>Node.js</p>
                     </div>
 
-                    <!-- JavaScript Skill -->
-                    <div class="skill-card animated slide-right animated-border" data-delay="200">
-                        <div class="skill-icon">
-                            <img src="skillsImages/JavaScript.png" alt="JavaScript icon">
+                    <div class="project-card animated slide-up animated-border" data-delay="200">
+                        <img src="projectsImages/SinglyLinkedList.JPG" alt="SinglyLinkedListImplementation"> 
+                        <div class="project-info">
+                            <h3>Singly Linked List Implementation</h3>
+                            <p>A C++ console app for managing a singly linked list with insert, search, and print functions.</p>
+                            <div class="project-links">
+                                <a href="https://github.com/Nathanlie-Ortega/SinglyLinkedListImplementation" class="project-link" target="_blank" rel="noopener noreferrer">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                            </div>
                         </div>
-                        <p>JavaScript</p>
                     </div>
 
-                    <!-- CSS Skill -->
-                    <div class="skill-card animated slide-down animated-border" data-delay="300">
-                        <div class="skill-icon">
-                            <img src="skillsImages/CSS.png" alt="CSS icon">
+                    <div class="project-card animated slide-down animated-border" data-delay="300">
+                        <img src="projectsImages/StudentExamGradesAnalyzer.JPG" alt="StudentExamGradesAnalyzer">
+                        <div class="project-info">
+                            <h3>Student Exam Grades Analyzer</h3>
+                            <p>A C++ console app for analyzing student grades with statistical calculations.</p>
+                            <div class="project-links">
+                                <a href="https://github.com/Nathanlie-Ortega/StudentExamGradesAnalyzer" class="project-link" target="_blank" rel="noopener noreferrer">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                            </div>
                         </div>
-                        <p>CSS</p>
                     </div>
 
-                    <!-- C Skill -->
-                    <div class="skill-card animated slide-down animated-border" data-delay="400">
-                        <div class="skill-icon">
-                            <img src="skillsImages/C.png" alt="C icon">
+                    <div class="project-card animated slide-right animated-border" data-delay="400">
+                        <img src="projectsImages/HashTable.JPG" alt="HashTable">
+                        <div class="project-info">
+                            <h3>Hash Table</h3>
+                            <p>A C++ console app for managing a hash table using linear probing and chaining with insert, search, delete, and display functionality.</p>
+                            <div class="project-links">
+                                <a href="https://github.com/Nathanlie-Ortega/HashTable" class="project-link" target="_blank" rel="noopener noreferrer">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                            </div>
                         </div>
-                        <p>C</p>
                     </div>
 
-                    <!-- Python Skill -->
-                    <div class="skill-card animated slide-down animated-border" data-delay="500">
-                        <div class="skill-icon">
-                            <img src="skillsImages/Python.png" alt="Python icon">
+                    <div class="project-card animated slide-left animated-border" data-delay="500">
+                        <img src="projectsImages/GraphAdjacencyWalkAnalyzer.JPG" alt="GraphAdjacencyWalkAnalyzer">
+                        <div class="project-info">
+                            <h3>Graph Adjacency Walk Analyzer</h3>
+                            <p>A C++ console app for analyzing graph walks using adjacency lists with trail, path, and cycle validation.</p>
+                            <div class="project-links">
+                                <a href="https://github.com/Nathanlie-Ortega/GraphAdjacencyWalkAnalyzer" class="project-link" target="_blank" rel="noopener noreferrer">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                            </div>
                         </div>
-                        <p>Python</p>
                     </div>
 
-                    <!-- Java Skill -->
-                    <div class="skill-card animated slide-down animated-border" data-delay="500">
-                        <div class="skill-icon">
-                            <img src="skillsImages/Java.png" alt="Python icon">
+                    <div class="project-card animated slide-up animated-border" data-delay="600">
+                        <img src="https://via.placeholder.com/300x200" alt="Pomodoro Website Future Project">
+                        <div class="project-info">
+                            <h3>Pomodoro Website Future Project</h3>
+                            <p>Interactive data visualization dashboard for time management using the Pomodoro technique.</p>
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                <a href="#" class="project-link"><i class="fa-brands fa-github"></i></a>
+                            </div>
                         </div>
-                        <p>Java</p>
                     </div>
-
-                    <!-- HTML Skill -->
-                    <div class="skill-card animated slide-up animated-border" data-delay="600">
-                        <div class="skill-icon">
-                            <img src="skillsImages/HTML.png" alt="HTML icon">
-                        </div>
-                        <p>HTML</p>
-                    </div>
-                </div>
-                
-                <!-- Show Less Button (initially hidden) -->
-                <div id="less-skills-container" class="more-projects-container hidden">
-                    <button id="less-skills-btn" class="more-projects-btn">
-                        <i class="fa-solid fa-minus"></i> Show Less
-                    </button>
-                </div>
-            </div>
-            
-            <!-- Development Tools & Technologies Skills -->
-            <div class="subsection animated fade-up" data-delay="700" id="tools-tech">
-                <h3 class="subsection-title">Development Tools & Technologies Skills</h3>
-                <div class="skills-grid">
-
-                    <!-- Git Skill -->
-                    <div class="skill-card animated slide-up animated-border" data-delay="800">
-                        <div class="skill-icon">
-                            <img src="skillsImages/Git.png" alt="Git icon">
-                        </div>
-                        <p>Git</p>
-                    </div>
-
-                    <!-- Visual Studio Skill -->
-                    <div class="skill-card animated slide-down animated-border" data-delay="900">
-                        <div class="skill-icon">
-                            <img src="skillsImages/VisualStudio.png" alt="VS Code icon">
-                        </div>
-                        <p>VS Code</p>
-                    </div>
-
-                    <!-- Github Skill -->
-                    <div class="skill-card animated slide-up animated-border" data-delay="100">
-                        <div class="skill-icon">
-                            <img src="skillsImages/GitHub.png" alt="GitHub icon">
-                        </div>
-                        <p>GitHub</p>
-                    </div>
-
-
-                </div>
-                
-                <!-- More Tools Button -->
-
-                <div class="more-projects-container">
-                    <button id="more-tools-btn" class="more-projects-btn">
-                        <i class="fa-solid fa-plus"></i> More Skills
-                    </button>
-                </div>
-                
-                <!-- Hidden Tools -->
-            
-                <div id="additional-tools" class="skills-grid hidden">
-
-
-                    <!-- Microsoft SQL Skill -->
-                    <div class="skill-card animated slide-left animated-border" data-delay="1000">
-                        <div class="skill-icon">
-                            <img src="skillsImages/SQL.png" alt="Linux icon">
-                        </div>
-                        <p>Microsoft SQL Server</p>
-                    </div>
-
-                    <!-- Jenzabar -->
-                    <div class="skill-card animated slide-left animated-border" data-delay="1000">
-                        <div class="skill-icon">
-                            <img src="skillsImages/Jenzabar.png" alt="Linux icon">
-                        </div>
-                        <p>Jenzabar</p>
-                    </div>
-
-                     <!-- Mitel -->
-                    <div class="skill-card animated slide-left animated-border" data-delay="1000">
-                        <div class="skill-icon">
-                            <img src="skillsImages/Mitel.png" alt="Linux icon">
-                        </div>
-                        <p>Mitel</p>
-                    </div>
-
                 </div>
                 
                 <!-- Show Less Button -->
-                <div id="less-tools-container" class="more-projects-container hidden">
-                    <button id="less-tools-btn" class="more-projects-btn">
+                <div id="less-projects-container" class="more-projects-container hidden">
+                    <button id="less-projects-btn" class="more-projects-btn">
                         <i class="fa-solid fa-minus"></i> Show Less
                     </button>
                 </div>
-
             </div>
-            
-            <!-- Certificates Subsection -->
-            <div class="subsection animated fade-up" data-delay="1100" id="certificates">
+        </section>
+        <!-- End Projects Section-->
 
-                <h3 class="subsection-title">Certificates</h3>
-                <div class="certificates-grid">
-
-                    <!-- Front End CodeSignal  -->
-                    <div class="certificate-card animated slide-right animated-border" data-delay="1200">
-
-                        <div class="certificate-icon view-certificate-trigger" data-certificate="certificatesImages/Front-EndEngineering.pdf">
-                            <i class="fa-solid fa-certificate"></i>
-                        </div>
-
-                        <div class="certificate-info">
-                            <h3>Front-End Engineering with React</h3>
-                            <p>CodeSignal</p>
-                            <p class="certificate-date">2025</p>
-                            <span class="view-certificate" data-certificate="certificatesImages/Front-EndEngineering.pdf">View Certificate</span>
-                            <a href="https://codesignal.com/learn/certificates/cm9qdyywc0004i804ohmmac9u/course-paths/13" target="_blank" class="credential-link">Credential Link</a>
-                        </div>
-
-                    </div>
-
-                    <!-- Full-Stack Engineering with JavaScript -->
-                    <div class="certificate-card animated slide-left animated-border" data-delay="1300">
-                        <div class="certificate-icon view-certificate-trigger" data-certificate="certificatesImages/Full-Stack EngineeringJavaScript.pdf">
-                            <i class="fa-solid fa-certificate"></i>
-                        </div>
-                        <div class="certificate-info">
-                            <h3>Full-Stack Engineering with JavaScript</h3>
-                            <p>CodeSignal</p>
-                            <p class="certificate-date">2025</p>
-                            <span class="view-certificate" data-certificate="certificatesImages/FullStackEngineeringJavaScript.pdf">View Certificate</span>
-                            <a href="https://codesignal.com/learn/certificates/cm9qdyywc0004i804ohmmac9u/course-paths/14" target="_blank" class="credential-link">Credential Link</a>
-                        </div>
-                    </div>
-
-
-                    <!-- Mastering Algorithms and Data Structures in C++ -->
-                    <div class="certificate-card animated slide-up animated-border" data-delay="1400">
-                        <div class="certificate-icon view-certificate-trigger" data-certificate="certificatesImages/C++MasteringAlgDataStrct.pdf">
-                            <i class="fa-solid fa-certificate"></i>
-                        </div>
-                        <div class="certificate-info">
-                            <h3>Mastering Algorithms and Data Structures in C++</h3>
-                            <p>CodeSignal</p>
-                            <p class="certificate-date">2025</p>
-                            <span class="view-certificate" data-certificate="certificatesImages/C++MasteringAlgDataStrct.pdf">View Certificate</span>
-                            <a href="https://codesignal.com/learn/certificates/cm9qdyywc0004i804ohmmac9u/course-paths/137" target="_blank" class="credential-link">Credential Link</a>
-                        </div>
-                    </div>
-
+        <!-- Skills Section  -->
+        <section id="skills" class="section">
+            <div class="container">
+                <div class="section-title animated fade-right center-align">
+                    <h2 class="multi-color-glow">Skills</h2>
+                    <p>My technical skills, certifications, and tools that power my work.</p>
                 </div>
+                
+                <!-- Programming Languages & Frameworks Skills -->
+                <div class="subsection animated fade-up" data-delay="200" id="technical-skills">
+                    <h3 class="subsection-title">Programming Languages & Frameworks</h3>
+                    <div class="skills-grid">
+                        <!-- C++ Skill -->
+                        <div class="skill-card animated slide-down animated-border" data-delay="300">
+                            <div class="skill-icon">
+                                <img src="skillsImages/C++.png" alt="C++ icon">
+                            </div>
+                            <p>C++</p>
+                        </div>
 
-                <!-- More Certificates Button -->
-                <div class="more-projects-container">
-                    <button id="more-certificates-btn" class="more-projects-btn">
-                        <i class="fa-solid fa-plus"></i> More Certificates
-                    </button>
+                        <!-- C# Skill -->
+                        <div class="skill-card animated slide-down animated-border" data-delay="400">
+                            <div class="skill-icon">
+                                <img src="skillsImages/C2.png" alt="C# icon">
+                            </div>
+                            <p>C#</p>
+                        </div>
+
+                        <!-- React Skill -->
+                        <div class="skill-card animated slide-left animated-border" data-delay="500">
+                            <div class="skill-icon">
+                                <img src="skillsImages/React.png" alt="React icon">
+                            </div>
+                            <p>React.js</p>
+                        </div>
+                    </div>
+
+                    <!-- More Skills Button --> 
+                    <div class="more-projects-container">
+                        <button id="more-skills-btn" class="more-projects-btn">
+                            <i class="fa-solid fa-plus"></i> More Skills
+                        </button>
+                    </div>
+
+                    <!-- Hidden Skills -->
+                    <div id="additional-skills" class="skills-grid hidden">
+                        <!-- Node.JS Skill -->
+                        <div class="skill-card animated slide-up animated-border" data-delay="100">
+                            <div class="skill-icon">
+                                <img src="skillsImages/NodeJS.png" alt="NodeJS icon">
+                            </div>
+                            <p>Node.js</p>
+                        </div>
+
+                        <!-- JavaScript Skill -->
+                        <div class="skill-card animated slide-right animated-border" data-delay="200">
+                            <div class="skill-icon">
+                                <img src="skillsImages/JavaScript.png" alt="JavaScript icon">
+                            </div>
+                            <p>JavaScript</p>
+                        </div>
+
+                        <!-- CSS Skill -->
+                        <div class="skill-card animated slide-down animated-border" data-delay="300">
+                            <div class="skill-icon">
+                                <img src="skillsImages/CSS.png" alt="CSS icon">
+                            </div>
+                            <p>CSS</p>
+                        </div>
+
+                        <!-- C Skill -->
+                        <div class="skill-card animated slide-down animated-border" data-delay="400">
+                            <div class="skill-icon">
+                                <img src="skillsImages/C.png" alt="C icon">
+                            </div>
+                            <p>C</p>
+                        </div>
+
+                        <!-- Python Skill -->
+                        <div class="skill-card animated slide-down animated-border" data-delay="500">
+                            <div class="skill-icon">
+                                <img src="skillsImages/Python.png" alt="Python icon">
+                            </div>
+                            <p>Python</p>
+                        </div>
+
+                        <!-- Java Skill -->
+                        <div class="skill-card animated slide-down animated-border" data-delay="500">
+                            <div class="skill-icon">
+                                <img src="skillsImages/Java.png" alt="Python icon">
+                            </div>
+                            <p>Java</p>
+                        </div>
+
+                        <!-- HTML Skill -->
+                        <div class="skill-card animated slide-up animated-border" data-delay="600">
+                            <div class="skill-icon">
+                                <img src="skillsImages/HTML.png" alt="HTML icon">
+                            </div>
+                            <p>HTML</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Show Less Button (initially hidden) -->
+                    <div id="less-skills-container" class="more-projects-container hidden">
+                        <button id="less-skills-btn" class="more-projects-btn">
+                            <i class="fa-solid fa-minus"></i> Show Less
+                        </button>
+                    </div>
                 </div>
+                
+                <!-- Development Tools & Technologies Skills -->
+                <div class="subsection animated fade-up" data-delay="700" id="tools-tech">
+                    <h3 class="subsection-title">Development Tools & Technologies Skills</h3>
+                    <div class="skills-grid">
 
-                <!-- Hidden Certificates/WorkCertificates -->
-                <div id="additional-certificates" class="certificates-grid hidden">
+                        <!-- Git Skill -->
+                        <div class="skill-card animated slide-up animated-border" data-delay="800">
+                            <div class="skill-icon">
+                                <img src="skillsImages/Git.png" alt="Git icon">
+                            </div>
+                            <p>Git</p>
+                        </div>
 
-                    <!-- Mastering Algorithms and Data Structures in Java -->
-                    <div class="certificate-card animated slide-down animated-border" data-delay="100">
-                        <div class="certificate-icon view-certificate-trigger" data-certificate="certificatesImages/JavaMasteringAlgDataStrct.pdf">
-                            <i class="fa-solid fa-certificate"></i>
+                        <!-- Visual Studio Skill -->
+                        <div class="skill-card animated slide-down animated-border" data-delay="900">
+                            <div class="skill-icon">
+                                <img src="skillsImages/VisualStudio.png" alt="VS Code icon">
+                            </div>
+                            <p>VS Code</p>
                         </div>
-                        <div class="certificate-info">
-                            <h3>Mastering Algorithms and Data Structures in Java</h3>
-                            <p>CodeSignal</p>
-                            <p class="certificate-date">2025</p>
-                            <span class="view-certificate" data-certificate="certificatesImages/JavaMasteringAlgDataStrct.pdf">View Certificate</span>
-                            <a href="https://codesignal.com/learn/certificates/cm9qdyywc0004i804ohmmac9u/course-paths/9" target="_blank" class="credential-link">Credential Link</a>
+
+                        <!-- Github Skill -->
+                        <div class="skill-card animated slide-up animated-border" data-delay="100">
+                            <div class="skill-icon">
+                                <img src="skillsImages/GitHub.png" alt="GitHub icon">
+                            </div>
+                            <p>GitHub</p>
                         </div>
+
+
                     </div>
+                    
+                    <!-- More Tools Button -->
 
-                    <!-- Mastering Algorithms and Data Structures in JavaScript -->
-                    <div class="certificate-card animated slide-right animated-border" data-delay="200">
-                        <div class="certificate-icon view-certificate-trigger" data-certificate="certificatesImages/JavaScriptMasteringAlgDataStrct.pdf">
-                            <i class="fa-solid fa-certificate"></i>
-                        </div>
-                        <div class="certificate-info">
-                            <h3>Mastering Algorithms and Data Structures in JavaScript</h3>
-                            <p>CodeSignal</p>
-                            <p class="certificate-date">2025</p>
-                            <span class="view-certificate" data-certificate="certificatesImages/JavaScriptMasteringAlgDataStrct.pdf">View Certificate</span>
-                            <a href="https://codesignal.com/learn/certificates/cm9qdyywc0004i804ohmmac9u/course-paths/10" target="_blank" class="credential-link">Credential Link</a>
-                        </div>
+                    <div class="more-projects-container">
+                        <button id="more-tools-btn" class="more-projects-btn">
+                            <i class="fa-solid fa-plus"></i> More Skills
+                        </button>
                     </div>
+                    
+                    <!-- Hidden Tools -->
+                
+                    <div id="additional-tools" class="skills-grid hidden">
 
-                    <!-- Mastering Algorithms and Data Structures in Python -->
-                    <div class="certificate-card animated slide-left animated-border" data-delay="300">
-                        <div class="certificate-icon view-certificate-trigger" data-certificate="certificatesImages/PythonMasteringAlgDataStrct.pdf">
-                            <i class="fa-solid fa-certificate"></i>
+
+                        <!-- Microsoft SQL Skill -->
+                        <div class="skill-card animated slide-left animated-border" data-delay="1000">
+                            <div class="skill-icon">
+                                <img src="skillsImages/SQL.png" alt="Linux icon">
+                            </div>
+                            <p>Microsoft SQL Server</p>
                         </div>
-                        <div class="certificate-info">
-                            <h3>Mastering Algorithms and Data Structures in Python</h3>
-                            <p>CodeSignal</p>
-                            <p class="certificate-date">2025</p>
-                            <span class="view-certificate" data-certificate="certificatesImages/PythonMasteringAlgDataStrct.pdf">View Certificate</span>
-                            <a href="https://codesignal.com/learn/certificates/cm9qdyywc0004i804ohmmac9u/course-paths/5" target="_blank" class="credential-link">Credential Link</a>
+
+                        <!-- Jenzabar -->
+                        <div class="skill-card animated slide-left animated-border" data-delay="1000">
+                            <div class="skill-icon">
+                                <img src="skillsImages/Jenzabar.png" alt="Linux icon">
+                            </div>
+                            <p>Jenzabar</p>
                         </div>
+
+                        <!-- Mitel -->
+                        <div class="skill-card animated slide-left animated-border" data-delay="1000">
+                            <div class="skill-icon">
+                                <img src="skillsImages/Mitel.png" alt="Linux icon">
+                            </div>
+                            <p>Mitel</p>
+                        </div>
+
+                    </div>
+                    
+                    <!-- Show Less Button -->
+                    <div id="less-tools-container" class="more-projects-container hidden">
+                        <button id="less-tools-btn" class="more-projects-btn">
+                            <i class="fa-solid fa-minus"></i> Show Less
+                        </button>
                     </div>
 
                 </div>
                 
-                <!-- Show Less Button  -->
-                <div id="less-certificates-container" class="more-projects-container hidden">
-                    <button id="less-certificates-btn" class="more-projects-btn">
-                        <i class="fa-solid fa-minus"></i> Show Less
-                    </button>
-                </div>
+                <!-- Certificates Subsection -->
+                <div class="subsection animated fade-up" data-delay="1100" id="certificates">
 
-            </div>
-            
-            <!-- Certificate Modal -->
-            <div id="certificate-modal" class="modal">
-                <div class="modal-content">
-                    <span class="close-modal">&times;</span>
-                    <h2 id="modal-title">Certificate</h2>
-                    <div class="certificate-display">
-                        <iframe id="certificate-frame" src="/placeholder.svg" frameborder="0"></iframe>
+                    <h3 class="subsection-title">Certificates</h3>
+                    <div class="certificates-grid">
+
+                        <!-- Front End CodeSignal  -->
+                        <div class="certificate-card animated slide-right animated-border" data-delay="1200">
+
+                            <div class="certificate-icon view-certificate-trigger" data-certificate="certificatesImages/Front-EndEngineering.pdf">
+                                <i class="fa-solid fa-certificate"></i>
+                            </div>
+
+                            <div class="certificate-info">
+                                <h3>Front-End Engineering with React</h3>
+                                <p>CodeSignal</p>
+                                <p class="certificate-date">2025</p>
+                                <span class="view-certificate" data-certificate="certificatesImages/Front-EndEngineering.pdf">View Certificate</span>
+                                <a href="https://codesignal.com/learn/certificates/cm9qdyywc0004i804ohmmac9u/course-paths/13" target="_blank" class="credential-link">Credential Link</a>
+                            </div>
+
+                        </div>
+
+                        <!-- Full-Stack Engineering with JavaScript -->
+                        <div class="certificate-card animated slide-left animated-border" data-delay="1300">
+                            <div class="certificate-icon view-certificate-trigger" data-certificate="certificatesImages/Full-Stack EngineeringJavaScript.pdf">
+                                <i class="fa-solid fa-certificate"></i>
+                            </div>
+                            <div class="certificate-info">
+                                <h3>Full-Stack Engineering with JavaScript</h3>
+                                <p>CodeSignal</p>
+                                <p class="certificate-date">2025</p>
+                                <span class="view-certificate" data-certificate="certificatesImages/FullStackEngineeringJavaScript.pdf">View Certificate</span>
+                                <a href="https://codesignal.com/learn/certificates/cm9qdyywc0004i804ohmmac9u/course-paths/14" target="_blank" class="credential-link">Credential Link</a>
+                            </div>
+                        </div>
+
+
+                        <!-- Mastering Algorithms and Data Structures in C++ -->
+                        <div class="certificate-card animated slide-up animated-border" data-delay="1400">
+                            <div class="certificate-icon view-certificate-trigger" data-certificate="certificatesImages/C++MasteringAlgDataStrct.pdf">
+                                <i class="fa-solid fa-certificate"></i>
+                            </div>
+                            <div class="certificate-info">
+                                <h3>Mastering Algorithms and Data Structures in C++</h3>
+                                <p>CodeSignal</p>
+                                <p class="certificate-date">2025</p>
+                                <span class="view-certificate" data-certificate="certificatesImages/C++MasteringAlgDataStrct.pdf">View Certificate</span>
+                                <a href="https://codesignal.com/learn/certificates/cm9qdyywc0004i804ohmmac9u/course-paths/137" target="_blank" class="credential-link">Credential Link</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- More Certificates Button -->
+                    <div class="more-projects-container">
+                        <button id="more-certificates-btn" class="more-projects-btn">
+                            <i class="fa-solid fa-plus"></i> More Certificates
+                        </button>
+                    </div>
+
+                    <!-- Hidden Certificates/WorkCertificates -->
+                    <div id="additional-certificates" class="certificates-grid hidden">
+
+                        <!-- Mastering Algorithms and Data Structures in Java -->
+                        <div class="certificate-card animated slide-down animated-border" data-delay="100">
+                            <div class="certificate-icon view-certificate-trigger" data-certificate="certificatesImages/JavaMasteringAlgDataStrct.pdf">
+                                <i class="fa-solid fa-certificate"></i>
+                            </div>
+                            <div class="certificate-info">
+                                <h3>Mastering Algorithms and Data Structures in Java</h3>
+                                <p>CodeSignal</p>
+                                <p class="certificate-date">2025</p>
+                                <span class="view-certificate" data-certificate="certificatesImages/JavaMasteringAlgDataStrct.pdf">View Certificate</span>
+                                <a href="https://codesignal.com/learn/certificates/cm9qdyywc0004i804ohmmac9u/course-paths/9" target="_blank" class="credential-link">Credential Link</a>
+                            </div>
+                        </div>
+
+                        <!-- Mastering Algorithms and Data Structures in JavaScript -->
+                        <div class="certificate-card animated slide-right animated-border" data-delay="200">
+                            <div class="certificate-icon view-certificate-trigger" data-certificate="certificatesImages/JavaScriptMasteringAlgDataStrct.pdf">
+                                <i class="fa-solid fa-certificate"></i>
+                            </div>
+                            <div class="certificate-info">
+                                <h3>Mastering Algorithms and Data Structures in JavaScript</h3>
+                                <p>CodeSignal</p>
+                                <p class="certificate-date">2025</p>
+                                <span class="view-certificate" data-certificate="certificatesImages/JavaScriptMasteringAlgDataStrct.pdf">View Certificate</span>
+                                <a href="https://codesignal.com/learn/certificates/cm9qdyywc0004i804ohmmac9u/course-paths/10" target="_blank" class="credential-link">Credential Link</a>
+                            </div>
+                        </div>
+
+                        <!-- Mastering Algorithms and Data Structures in Python -->
+                        <div class="certificate-card animated slide-left animated-border" data-delay="300">
+                            <div class="certificate-icon view-certificate-trigger" data-certificate="certificatesImages/PythonMasteringAlgDataStrct.pdf">
+                                <i class="fa-solid fa-certificate"></i>
+                            </div>
+                            <div class="certificate-info">
+                                <h3>Mastering Algorithms and Data Structures in Python</h3>
+                                <p>CodeSignal</p>
+                                <p class="certificate-date">2025</p>
+                                <span class="view-certificate" data-certificate="certificatesImages/PythonMasteringAlgDataStrct.pdf">View Certificate</span>
+                                <a href="https://codesignal.com/learn/certificates/cm9qdyywc0004i804ohmmac9u/course-paths/5" target="_blank" class="credential-link">Credential Link</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                    <!-- Show Less Button  -->
+                    <div id="less-certificates-container" class="more-projects-container hidden">
+                        <button id="less-certificates-btn" class="more-projects-btn">
+                            <i class="fa-solid fa-minus"></i> Show Less
+                        </button>
+                    </div>
+
+                </div>
+                
+                <!-- Certificate Modal -->
+                <div id="certificate-modal" class="modal">
+                    <div class="modal-content">
+                        <span class="close-modal">&times;</span>
+                        <h2 id="modal-title">Certificate</h2>
+                        <div class="certificate-display">
+                            <iframe id="certificate-frame" src="/placeholder.svg" frameborder="0"></iframe>
+                        </div>
                     </div>
                 </div>
+
+
             </div>
 
+        </section>
+        <!-- End Skills Section-->
 
-        </div>
-
-    </section>
-    <!-- End Skills Section-->
-
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-        <div class="container">
-            <div class="section-title animated fade-right center-align">
-                <h2 class="multi-color-glow">Reach Out to Me</h2>
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="container">
+                <div class="section-title animated fade-right center-align">
+                    <h2 class="multi-color-glow">Reach Out to Me</h2>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="contact-info animated fade-up">
+                    <div class="contact-methods">
+                        <a href="mailto:nathanlieortega.dev@gmail.com" class="contact-method animated-border">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>nathanlieortega.dev@gmail.com</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/nathanlie-ortega-a71359222/" target="_blank" class="contact-method animated-border">
+                            <i class="fa-brands fa-linkedin"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://github.com/Nathanlie-Ortega" target="_blank" class="contact-method animated-border">
+                            <i class="fa-brands fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <form id="contact-form" class="contact-form animated fade-up animated-border" data-delay="200" 
+                    action="https://formspree.io/f/mbloaqdj"
+                    method="POST">
+                    <input type="text" name="name" placeholder="Name" required class="no-autofill-style">
+                    <input type="email" name="email" placeholder="Email" required class="no-autofill-style">
+                    <textarea name="message" rows="6" placeholder="Message" required></textarea>
+                    <button type="submit">Let's Collaborate</button>
+                </form>
             </div>
             
-            <!-- Contact Info -->
-            <div class="contact-info animated fade-up">
-                <div class="contact-methods">
-                    <a href="mailto:nathanlieortega.dev@gmail.com" class="contact-method animated-border">
-                        <i class="fa-solid fa-envelope"></i>
-                        <span>nathanlieortega.dev@gmail.com</span>
-                    </a>
-                    <a href="https://www.linkedin.com/in/nathanlie-ortega-a71359222/" target="_blank" class="contact-method animated-border">
-                        <i class="fa-brands fa-linkedin"></i>
-                        <span>LinkedIn</span>
-                    </a>
-                    <a href="https://github.com/Nathanlie-Ortega" target="_blank" class="contact-method animated-border">
-                        <i class="fa-brands fa-github"></i>
-                        <span>GitHub</span>
-                    </a>
+            <!-- Success Message Modal -->
+            <div id="success-modal" class="modal">
+                <div class="modal-content success-content">
+                    <span class="close-modal">&times;</span>
+                    <i class="fa-solid fa-circle-check success-icon"></i>
+                    <h2>Message Sent!</h2>
+                    <p>Thank you for reaching out. I'll get back to you soon.</p>
                 </div>
             </div>
-            
-            <!-- Contact Form -->
-            <form id="contact-form" class="contact-form animated fade-up animated-border" data-delay="200" 
-                action="https://formspree.io/f/mbloaqdj"
-                method="POST">
-                <input type="text" name="name" placeholder="Name" required class="no-autofill-style">
-                <input type="email" name="email" placeholder="Email" required class="no-autofill-style">
-                <textarea name="message" rows="6" placeholder="Message" required></textarea>
-                <button type="submit">Let's Collaborate</button>
-            </form>
-        </div>
-        
-        <!-- Success Message Modal -->
-        <div id="success-modal" class="modal">
-            <div class="modal-content success-content">
-                <span class="close-modal">&times;</span>
-                <i class="fa-solid fa-circle-check success-icon"></i>
-                <h2>Message Sent!</h2>
-                <p>Thank you for reaching out. I'll get back to you soon.</p>
-            </div>
-        </div>
-    </section>
-    <!-- End Contact Section-->  
+        </section>
+        <!-- End Contact Section-->  
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>© 2025 Nathanlie Ortega. All rights reserved.</p>
-        </div>
-    </footer>
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <p>© 2025 Nathanlie Ortega. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
 
     <script src="script.js"></script>
     
