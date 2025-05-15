@@ -70,7 +70,8 @@ function setupAnimations() {
 
   const observer = new IntersectionObserver(
     (entries) => {
-      entries.forEach((entry) => {
+      entries.forEach((entry) => 
+        {
         if (entry.isIntersecting) {
           const element = entry.target;
           element.classList.add("visible");
@@ -86,7 +87,8 @@ function setupAnimations() {
     { threshold: 0.1 }
   );
 
-  animatedElements.forEach((element) => {
+  animatedElements.forEach((element) =>
+     {
     observer.observe(element);
   });
 }
@@ -242,19 +244,22 @@ function setupContactForm()
 }
 
 // More Projects Functionality
-function setupMoreProjects() {
+function setupMoreProjects() 
+{
   const moreProjectsBtn = document.getElementById("more-projects-btn");
   const lessProjectsBtn = document.getElementById("less-projects-btn");
   const additionalProjects = document.getElementById("additional-projects");
   const lessProjectsContainer = document.getElementById("less-projects-container");
 
-  moreProjectsBtn.addEventListener("click", () => {
+  moreProjectsBtn.addEventListener("click", () => 
+    {
     additionalProjects.classList.remove("hidden");
     moreProjectsBtn.parentElement.classList.add("hidden");
     lessProjectsContainer.classList.remove("hidden");
   });
 
-  lessProjectsBtn.addEventListener("click", () => {
+  lessProjectsBtn.addEventListener("click", () =>
+     {
     additionalProjects.classList.add("hidden");
     moreProjectsBtn.parentElement.classList.remove("hidden");
     lessProjectsContainer.classList.add("hidden");
