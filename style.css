@@ -1349,18 +1349,21 @@ section#home
 
 
 /* Contact Section */
-.contact-info {
+.contact-info 
+{
   margin-bottom: 30px;
 }
 
-.contact-methods {
+.contact-methods 
+{
   display: flex;
   justify-content: center;
   gap: 30px;
   flex-wrap: wrap;
 }
 
-.contact-method {
+.contact-method 
+{
   display: flex;
   align-items: center;
   gap: 10px;
@@ -1372,12 +1375,14 @@ section#home
   transition: all 0.3s;
 }
 
-.contact-method i {
+.contact-method i 
+{
   font-size: 1.5rem;
   color: var(--color-2);
 }
 
-.contact-method:hover {
+.contact-method:hover 
+{
   background-color: var(--btn-bg);
   transform: translateY(-5px);
   border-color: var(--color-2);
@@ -1385,12 +1390,14 @@ section#home
 }
 
 .contact-method:hover i,
-.contact-method:hover span {
+.contact-method:hover span
+ {
   color: white;
 }
 
 /* Contact Form */
-.contact-form {
+.contact-form 
+{
   display: flex;
   flex-direction: column;
   max-width: 600px;
@@ -1401,7 +1408,8 @@ section#home
 }
 
 .contact-form input,
-.contact-form textarea {
+.contact-form textarea 
+{
   margin-bottom: 15px;
   padding: 10px;
   border-radius: 5px;
@@ -1421,12 +1429,14 @@ section#home
   transition: background-color 5000s ease-in-out 0s;
 }
 
-.contact-form textarea {
+.contact-form textarea 
+{
   resize: vertical;
   min-height: 120px;
 }
 
-.contact-form button {
+.contact-form button 
+{
   padding: 12px 24px;
   background-color: var(--btn-bg);
   color: var(--btn-text);
@@ -1441,13 +1451,17 @@ section#home
   font-weight: 500;
 }
 
-.contact-form button:hover {
+.contact-form button:hover
+ {
   background-color: var(--btn-hover-bg);
   color: var(--btn-hover-text);
   border: 2px solid var(--btn-border);
   transform: scale(1.05);
   box-shadow: 0 0 20px var(--btn-shadow);
 }
+
+
+
 
 /* Footer */
 footer {
