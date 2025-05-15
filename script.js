@@ -381,6 +381,18 @@ function fixIOSBackground() {
 // Initialize everything when DOM is loaded
 document.addEventListener("DOMContentLoaded", () => 
 {
+
+  var backgroundImage = new Image();
+    backgroundImage.src = '/backgroundImages/background.jpg';
+    backgroundImage.onload = function() {
+        document.body.style.backgroundImage = 'url(/backgroundImages/Background.jpg)';
+    };
+
+
+
+
+
+
   // Fix for iOS background
   fixIOSBackground();
   
