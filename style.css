@@ -666,7 +666,7 @@ section#home
 
 
 
-/* About Section */
+/* About Section */ 
 .about-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
