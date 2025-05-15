@@ -264,13 +264,15 @@ function setupMoreProjects() {
 }
 
 // More Certificates Functionality
-function setupMoreCertificates() {
+function setupMoreCertificates() 
+{
   const moreCertificatesBtn = document.getElementById("more-certificates-btn");
   const lessCertificatesBtn = document.getElementById("less-certificates-btn");
   const additionalCertificates = document.getElementById("additional-certificates");
   const lessCertificatesContainer = document.getElementById("less-certificates-container");
 
-  moreCertificatesBtn.addEventListener("click", () => {
+  moreCertificatesBtn.addEventListener("click", () => 
+    {
     additionalCertificates.classList.remove("hidden");
     moreCertificatesBtn.parentElement.classList.add("hidden");
     lessCertificatesContainer.classList.remove("hidden");
@@ -312,7 +314,8 @@ function setupMoreSkills()
 }
 
 // More Tools Functionality
-function setupMoreTools() {
+function setupMoreTools() 
+{
   const moreToolsBtn = document.getElementById("more-tools-btn");
   const lessToolsBtn = document.getElementById("less-tools-btn");
   const additionalTools = document.getElementById("additional-tools");
@@ -336,7 +339,8 @@ function setupMoreTools() {
 }
 
 // Animated Border Color Change
-function setupAnimatedBorders() {
+function setupAnimatedBorders() 
+{
   const innerBorder = document.querySelector(".animated-border-inner");
   const outerBorder = document.querySelector(".animated-border-outer");
 
