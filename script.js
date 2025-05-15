@@ -93,26 +93,21 @@ function setupAnimations() {
   });
 }
 
-// Setup Multi-Color Glow Effect
-function setupMultiColorGlow() 
-{
-  const elements = document.querySelectorAll(".multi-color-glow");
+// Update this function in script.js to ensure it targets dropdown menu items too
+function setupMultiColorGlow() {
+  const elements = document.querySelectorAll(".multi-color-glow, .dropdown .links a");
 
-
-  elements.forEach((element) => 
-    {
+  elements.forEach((element) => {
     const text = element.textContent;
     element.textContent = "";
 
     // Create spans for each letter, preserving spaces
-    for (let i = 0; i < text.length; i++) 
-      {
+    for (let i = 0; i < text.length; i++) {
       const span = document.createElement("span");
       span.textContent = text[i];
 
       // Add a special class for spaces to maintain proper spacing
-      if (text[i] === " ") 
-        {
+      if (text[i] === " ") {
         span.classList.add("space-char");
         span.innerHTML = "&nbsp;";
       }
