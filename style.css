@@ -314,6 +314,7 @@ nav
   z-index: 9;
 }
 
+/* Updated Hamburger Menu Styling */
 .dropdown .links a {
   display: flex;
   color: var(--text-primary);
@@ -323,16 +324,74 @@ nav
   align-items: center;
   transition: all 0.3s ease;
   font-weight: 500;
-  border-radius: 5px;
+  position: relative;
   margin: 5px 20px;
+  background-color: transparent; /* Remove background color */
+  border: none; /* Remove border */
 }
 
+/* Add shorter underline effect */
+.dropdown .links a::after {
+  content: '';
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-2);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+/* Expand underline on hover - shorter width (40% instead of 70%) */
+.dropdown .links a:hover::after {
+  width: 40%;
+}
+
+/* Keep the multi-color glow effect for text but don't change background */
 .dropdown .links a:hover {
-  background-color: var(--nav-hover-bg);
-  border: var(--nav-hover-border);
+  background-color: transparent; /* Ensure no background */
+  border: none; /* Ensure no border */
 }
 
-/* UPDATED: Cancel button positioning and styling to match hamburger */
+/* Apply the same multi-color letter effect as in the main navigation */
+.dropdown .links a.multi-color-glow span:nth-child(7n + 1):hover {
+  color: var(--color-1);
+  text-shadow: 0 0 8px var(--color-1);
+}
+
+.dropdown .links a.multi-color-glow span:nth-child(7n + 2):hover {
+  color: var(--color-2);
+  text-shadow: 0 0 8px var(--color-2);
+}
+
+.dropdown .links a.multi-color-glow span:nth-child(7n + 3):hover {
+  color: var(--color-3);
+  text-shadow: 0 0 8px var(--color-3);
+}
+
+.dropdown .links a.multi-color-glow span:nth-child(7n + 4):hover {
+  color: var(--color-4);
+  text-shadow: 0 0 8px var(--color-4);
+}
+
+.dropdown .links a.multi-color-glow span:nth-child(7n + 5):hover {
+  color: var(--color-5);
+  text-shadow: 0 0 8px var(--color-5);
+}
+
+.dropdown .links a.multi-color-glow span:nth-child(7n + 6):hover {
+  color: var(--color-6);
+  text-shadow: 0 0 8px var(--color-6);
+}
+
+.dropdown .links a.multi-color-glow span:nth-child(7n + 7):hover {
+  color: var(--color-7);
+  text-shadow: 0 0 8px var(--color-7);
+}
+
+/* Cancel button styling to match hamburger */
 .cancel {
   position: absolute;
   top: 15px;
