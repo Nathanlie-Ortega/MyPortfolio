@@ -185,7 +185,8 @@ function setupCertificateModal()
   // Close modal when clicking outside the content
   window.addEventListener("click", (event) => 
     {
-    if (event.target === modal) {
+    if (event.target === modal)
+       {
       modal.style.display = "none";
       document.body.style.overflow = "auto";
     }
@@ -193,14 +194,16 @@ function setupCertificateModal()
 }
 
 // Contact Form Functionality
-function setupContactForm() {
+function setupContactForm() 
+{
   const contactForm = document.getElementById("contact-form");
   const successModal = document.getElementById("success-modal");
   const closeSuccessModal = successModal.querySelector(".close-modal");
 
   // Check for the formspree_form_submitted flag in localStorage
   window.addEventListener("load", () => {
-    if (localStorage.getItem("formspree_form_submitted") === "true") {
+    if (localStorage.getItem("formspree_form_submitted") === "true") 
+      {
       // Show success message
       successModal.style.display = "block";
       document.body.style.overflow = "hidden";
@@ -213,7 +216,8 @@ function setupContactForm() {
     }
   });
 
-  contactForm.addEventListener("submit", (e) => {
+  contactForm.addEventListener("submit", (e) => 
+    {
     // Set a flag in localStorage before form submission
     localStorage.setItem("formspree_form_submitted", "true");
 
@@ -221,13 +225,15 @@ function setupContactForm() {
   });
 
   // Close success modal
-  closeSuccessModal.addEventListener("click", () => {
+  closeSuccessModal.addEventListener("click", () => 
+    {
     successModal.style.display = "none";
     document.body.style.overflow = "auto";
   });
 
   // Close modal when clicking outside
-  window.addEventListener("click", (event) => {
+  window.addEventListener("click", (event) => 
+    {
     if (event.target === successModal) {
       successModal.style.display = "none";
       document.body.style.overflow = "auto";
