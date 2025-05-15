@@ -366,17 +366,7 @@ nav
   left: 50%;
   width: 0;
   height: 2px;
-}
-
-/* Add shorter underline effect */
-.dropdown .links a::after {
-  content: '';
-  position: absolute;
-  bottom: 5px;
-  left: 50%;
-  width: 0;
-  height: 2px;
-  background-color: var(--color-2);
+    background-color: var(--color-2);
   transition: all 0.3s ease;
   transform: translateX(-50%);
   border-radius: 2px;
@@ -1810,5 +1800,20 @@ footer p
   {
     font-size: 1.5rem;
     white-space: normal;
+  }
+}
+
+/* iOS specific fixes */
+@supports (-webkit-touch-callout: none) {
+  body::before {
+    background-attachment: scroll;
+  }
+  
+  html, body {
+    height: 100%;
+    position: fixed;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
   }
 }
