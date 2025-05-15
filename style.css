@@ -693,14 +693,16 @@ section#home
 
 
 /* Education and Experience Timeline */
-.timeline {
+.timeline 
+{
   position: relative;
   max-width: 800px;
   margin: 0 auto;
   margin-top: 20px;
 }
 
-.timeline::after {
+.timeline::after 
+{
   content: "";
   position: absolute;
   width: 4px;
@@ -712,22 +714,26 @@ section#home
   border-radius: 4px;
 }
 
-.timeline-item {
+.timeline-item 
+{
   padding: 10px 40px;
   position: relative;
   width: 50%;
   box-sizing: border-box;
 }
 
-.timeline-item:nth-child(odd) {
+.timeline-item:nth-child(odd) 
+{
   left: 0;
 }
 
-.timeline-item:nth-child(even) {
+.timeline-item:nth-child(even) 
+{
   left: 50%;
 }
 
-.timeline-item::after {
+.timeline-item::after
+ {
   content: "\f19d"; /* Graduation cap icon for Education */
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
@@ -746,64 +752,75 @@ section#home
   box-shadow: 0 0 10px rgba(193, 122, 255, 0.7);
 }
 
-.timeline-item:nth-child(odd)::after {
+.timeline-item:nth-child(odd)::after 
+{
   right: -15px;
 }
 
-.timeline-item:nth-child(even)::after {
+.timeline-item:nth-child(even)::after 
+{
   left: -15px;
 }
 
 /* Work Experience Icon */
-.experience-item::after {
+.experience-item::after 
+{
   content: "\f0b1" !important; /* Briefcase icon for Work Experience */
 }
 
-.timeline-content {
+.timeline-content
+ {
   padding: 20px;
   background-color: var(--card-bg);
   border-radius: 8px;
   box-shadow: 0 0 10px var(--shadow-color);
 }
 
-.timeline-content h3 {
+.timeline-content h3
+ {
   font-size: 1.5rem;
   margin-bottom: 5px;
   color: var(--text-primary);
   font-weight: 600;
 }
 
-.timeline-content h4 {
+.timeline-content h4 
+{
   font-size: 1.2rem;
   color: var(--color-2);
   margin-bottom: 5px;
   font-weight: 500;
 }
 
-.timeline-date {
+.timeline-date 
+{
   font-style: italic;
   color: var(--text-secondary);
   margin-bottom: 10px;
 }
 
-.timeline-content p {
+.timeline-content p 
+{
   color: var(--text-primary);
   line-height: 1.5;
 }
 
-.experience-type {
+.experience-type 
+{
   font-style: italic;
   color: var(--text-secondary);
   margin-bottom: 5px;
 }
 
-.experience-location {
+.experience-location 
+{
   font-style: italic;
   color: var(--text-secondary);
   margin-bottom: 10px;
 }
 
-.experience-description {
+.experience-description 
+{
   color: var(--text-primary);
   line-height: 1.5;
 }
