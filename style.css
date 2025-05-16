@@ -1828,7 +1828,7 @@ footer p
     left: 0;
     width: 100%;
     padding: 20px 0;
-    margin-top: 40px;
+    margin-top: -40px;
     margin-bottom: 0;
   }
 }
