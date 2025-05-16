@@ -1165,7 +1165,7 @@ section#home
 /* Node.js Skill Card */
 #additional-skills .skill-card:nth-child(1) 
 {
-  background-image: url("paper.gif");
+  background-image: #035339;
   background-color: #035339;
 }
 
@@ -1178,78 +1178,78 @@ section#home
 /* CSS Skill Card */
 #additional-skills .skill-card:nth-child(3) 
 {
-  background-image: url("paper.gif");
+  background-image: #8d8989;
   background-color: #8d8989;
 }
 
 /* C Skill Card */
 #additional-skills .skill-card:nth-child(4)
  {
-  background-image: url("paper.gif");
+  background-image: #20125c;
   background-color: #20125c;
 }
 
 /* Python Skill Card */
 #additional-skills .skill-card:nth-child(5)
  {
-  background-image: url("paper.gif");
+  background-image: #4d9dec;
   background-color: #4d9dec;
 }
 
 /* Java Skill Card */
 #additional-skills .skill-card:nth-child(6) 
 {
-  background-image: url("paper.gif");
+  background-image: #2b2f33;
   background-color: #2b2f33;
 }
 
 /* HTML Skill Card */
 #additional-skills .skill-card:nth-child(7)
  {
-  background-image: url("paper.gif");
+  background-image: #ce6809;
   background-color: #ce6809;
 }
 
 /* Git Skill Card */
 #tools-tech .skill-card:nth-child(1) 
 {
-  background-image: url("paper.gif");
+  background-image: #5a4b3f;
   background-color: #130f0c;
 }
 
 /* Visual Studio Code Skill Card */
 #tools-tech .skill-card:nth-child(2)
  {
-  background-image: url("paper.gif");
+  background-image: #34048b;
   background-color: #34048b;
 }
 
 /* GitHub Skill Card */
 #tools-tech .skill-card:nth-child(3)
  {
-  background-image: url("paper.gif");
-  background-color: #66617a;
+  background-image: #948bb3;
+  background-color: #948bb3;
 }
 
 /* Microsoft SQL Skill Card */
 #additional-tools .skill-card:nth-child(1)
  {
-  background-image: url("paper.gif");
-  background-color: #945c09;
+  background-image: #ce321e;
+  background-color: #ce321e;
 }
 
 /* Jenzabar Skill Card */
 #additional-tools .skill-card:nth-child(2)
  {
-  background-image: url("paper.gif");
-  background-color: #2e51ec;
+  background-image: #4060f0;
+  background-color: #4060f0;
 }
 
 /* Mitel Skill Card */
 #additional-tools .skill-card:nth-child(3)
 {
-  background-image: url("paper.gif");
-  background-color: #84a2da;
+  background-image: #8ba4d3;
+  background-color: #8ba4d3;
 }
 
 .skill-card:hover 
