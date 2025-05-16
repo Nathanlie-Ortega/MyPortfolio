@@ -102,6 +102,7 @@ body.background-loaded {
   flex: 1 0 auto; /* Allow the wrapper to grow but not shrink */
   display: flex;
   flex-direction: column;
+  justify-content: space-between; /* This ensures footer stays at bottom */
 }
 
 h1,
@@ -1569,6 +1570,8 @@ footer
   min-height: 60px;
   width: 100%;
   flex-shrink: 0; /* Prevent footer from shrinking */
+  position: relative; /* Ensure footer is positioned properly */
+  z-index: 5; /* Ensure footer is above other elements */
 }
 
 footer p 
@@ -1813,6 +1816,21 @@ footer p
     font-size: 1.5rem;
     white-space: normal;
   }
+  
+  /* Fix for footer on mobile */
+  .page-wrapper {
+    padding-bottom: 60px; /* Add padding to ensure content doesn't overlap footer */
+  }
+  
+  footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    margin-top: 40px;
+    margin-bottom: 0;
+  }
 }
 
 /* iOS specific fixes */
@@ -1828,5 +1846,19 @@ footer p
     position: relative;
     overflow: auto;
     -webkit-overflow-scrolling: touch;
+  }
+  
+  /* Additional iOS footer fix */
+  .page-wrapper {
+    min-height: calc(100vh - 60px); /* Account for footer height */
+  }
+  
+  footer {
+    height: auto;
+    min-height: 60px;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
   }
 }

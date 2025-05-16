@@ -39,10 +39,15 @@
             flex: 1 0 auto;
             display: flex;
             flex-direction: column;
+            justify-content: space-between; /* This ensures footer stays at bottom */
+            min-height: 100vh; /* Ensure wrapper takes full height */
         }
         
         footer {
             flex-shrink: 0;
+            position: relative;
+            z-index: 5;
+            width: 100%;
         }
         
         /* Loading indicator */
@@ -380,7 +385,7 @@
                     </div>
 
                     <div class="project-card animated slide-up animated-border" data-delay="600">
-                        <img src="https://github.com/Nathanlie-Ortega/GraphAdjacencyWalkAnalyzer" alt="Pomodoro Website Future Project">
+                        <img src="assets/placeholder.svg" alt="Pomodoro Website Future Project">
                         <div class="project-info">
                             <h3>Pomodoro Website Future Project</h3>
                             <p>Interactive data visualization dashboard for time management using the Pomodoro technique.</p>
