@@ -1165,6 +1165,7 @@ section#home
 /* Node.js Skill Card */
 #additional-skills .skill-card:nth-child(1) 
 {
+  background-image: url("paper.gif");
   background-color: #035339;
 }
 
@@ -1227,28 +1228,28 @@ section#home
 #tools-tech .skill-card:nth-child(3)
  {
   background-image: url("paper.gif");
-  background-color: #908aac;
+  background-color: #66617a;
 }
 
 /* Microsoft SQL Skill Card */
 #additional-tools .skill-card:nth-child(1)
  {
   background-image: url("paper.gif");
-  background-color: #b45a5a;
+  background-color: #945c09;
 }
 
 /* Jenzabar Skill Card */
 #additional-tools .skill-card:nth-child(2)
  {
   background-image: url("paper.gif");
-  background-color: #0a2bbe;
+  background-color: #2e51ec;
 }
 
 /* Mitel Skill Card */
 #additional-tools .skill-card:nth-child(3)
 {
   background-image: url("paper.gif");
-  background-color: #acc4f1;
+  background-color: #84a2da;
 }
 
 .skill-card:hover 

@@ -82,14 +82,14 @@ document.addEventListener("DOMContentLoaded", () => {
             enable: true,
             distance: 150,
             color: "#ffffff",
-            opacity: 0.5, // Increased opacity
+            opacity: 0.8, // Increased opacity
             width: 1.8,   // Thicker lines
           },
           
           // PARTICLE MOVEMENT
           move: {
             enable: true,
-            speed: 1.0,   // Slightly faster movement
+            speed: 1.3,   // Slightly faster movement
             direction: "none",
             random: true,
             straight: false,
