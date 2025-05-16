@@ -1,7 +1,7 @@
 /* Base Styles */
 :root 
 {
-  --bg-primary: #1a0b2e;
+  --bg-primary: rgb(203, 95, 137);
   --bg-secondary: rgba(65, 40, 110, 0.5);
   --text-primary: #ffffff;
   --text-secondary: #d8c9ff;
@@ -91,6 +91,30 @@ body {
 /* Class added when background is loaded */
 body.background-loaded {
   background-image: url("backgroundImages/Background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 885px) {
+  body.background-loaded {
+    background-size: 110% auto; /* Stretch width for desktop */
+    background-position: 55% center; /* Shift right */
+  }
+}
+
+/* Scrollbar styling to eliminate white background */
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--bg-primary); /* Match body background */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #c9bfbf; /* Pinkish thumb */
+  border-radius: 6px;
 }
 
 /* Page wrapper to contain all content */
@@ -2012,7 +2036,7 @@ footer p
   .page-wrapper {
     min-height: calc(100vh - var(--footer-height)); /* Account for footer height */
     /* ADJUST THIS VALUE TO CHANGE BOTTOM PADDING ON iOS */
-    padding-bottom: 0px; /* Iphone Reduced from previous large value */
+    padding-bottom: 50px; /* Iphone Reduced from previous large value */
   }
   
   /* iOS footer styling - ADJUST THESE VALUES FOR iOS FOOTER */
