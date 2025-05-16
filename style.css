@@ -361,7 +361,7 @@ nav
   height: auto;
   backdrop-filter: brightness(40%) blur(5px);
   background-color: var(--nav-bg);
-  box-shadow: 0 0 20px var(--shadow-color);
+  box-shadow: -60px 0 0px var(--shadow-color); /* Shift shadow left with fuller blur */
   transition: 0.3s linear;
   z-index: 9;
 }
