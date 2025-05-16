@@ -401,6 +401,97 @@ function preloadBackgroundImage() {
   img.src = 'backgroundImages/Background.jpg';
 }
 
+// Function to apply multi-color glow effect to text
+function applyMultiColorGlow() {
+  // Apply to About section subsection titles
+  const aboutSubsectionTitles = document.querySelectorAll('#about-me .subsection-title, #education .subsection-title, #experience .subsection-title');
+  aboutSubsectionTitles.forEach(title => {
+    if (!title.classList.contains('multi-color-glow')) {
+      title.classList.add('multi-color-glow');
+      const text = title.textContent;
+      title.textContent = '';
+      
+      // Split the text into individual characters and wrap each in a span
+      for (let i = 0; i < text.length; i++) {
+        const span = document.createElement('span');
+        if (text[i] === ' ') {
+          span.classList.add('space-char');
+          span.textContent = ' ';
+        } else {
+          span.textContent = text[i];
+        }
+        title.appendChild(span);
+      }
+    }
+  });
+  
+  // Apply to Skills section subsection titles
+  const subsectionTitles = document.querySelectorAll('#technical-skills .subsection-title, #tools-tech .subsection-title, #certificates .subsection-title');
+  subsectionTitles.forEach(title => {
+    if (!title.classList.contains('multi-color-glow')) {
+      title.classList.add('multi-color-glow');
+      const text = title.textContent;
+      title.textContent = '';
+      
+      // Split the text into individual characters and wrap each in a span
+      for (let i = 0; i < text.length; i++) {
+        const span = document.createElement('span');
+        if (text[i] === ' ') {
+          span.classList.add('space-char');
+          span.textContent = ' ';
+        } else {
+          span.textContent = text[i];
+        }
+        title.appendChild(span);
+      }
+    }
+  });
+  
+  // Apply to skill card text
+  const skillCards = document.querySelectorAll('.skill-card p');
+  skillCards.forEach(card => {
+    // Check if already processed
+    if (card.children.length === 0) {
+      const text = card.textContent;
+      card.textContent = '';
+      
+      // Split the text into individual characters and wrap each in a span
+      for (let i = 0; i < text.length; i++) {
+        const span = document.createElement('span');
+        if (text[i] === ' ') {
+          span.classList.add('space-char');
+          span.textContent = ' ';
+        } else {
+          span.textContent = text[i];
+        }
+        card.appendChild(span);
+      }
+    }
+  });
+  
+  // Apply to certificate titles
+  const certificateTitles = document.querySelectorAll('.certificate-info h3');
+  certificateTitles.forEach(title => {
+    // Check if already processed
+    if (title.children.length === 0) {
+      const text = title.textContent;
+      title.textContent = '';
+      
+      // Split the text into individual characters and wrap each in a span
+      for (let i = 0; i < text.length; i++) {
+        const span = document.createElement('span');
+        if (text[i] === ' ') {
+          span.classList.add('space-char');
+          span.textContent = ' ';
+        } else {
+          span.textContent = text[i];
+        }
+        title.appendChild(span);
+      }
+    }
+  });
+}
+
 // Initialize everything when DOM is loaded
 document.addEventListener("DOMContentLoaded", () => 
 {
@@ -423,9 +514,25 @@ document.addEventListener("DOMContentLoaded", () =>
   setupMoreSkills();
   setupMoreTools();
   setupAnimatedBorders();
+  
+  // Apply multi-color glow effect
+  applyMultiColorGlow();
 
   // Note: We've moved the particles setup to a separate file
   // for better organization and troubleshooting
+  
+  // Make sure to apply the effect to dynamically loaded content too
+  document.getElementById('more-skills-btn')?.addEventListener('click', function() {
+    setTimeout(applyMultiColorGlow, 100); // Apply after the content is shown
+  });
+
+  document.getElementById('more-tools-btn')?.addEventListener('click', function() {
+    setTimeout(applyMultiColorGlow, 100); // Apply after the content is shown
+  });
+
+  document.getElementById('more-certificates-btn')?.addEventListener('click', function() {
+    setTimeout(applyMultiColorGlow, 100); // Apply after the content is shown
+  });
 });
 
 // Add window load event to ensure everything is fully loaded
@@ -437,4 +544,7 @@ window.addEventListener('load', function() {
     console.log('Forcing background image load');
     document.body.classList.add('background-loaded');
   }
+  
+  // Apply multi-color glow effect again to ensure it's applied to all elements
+  applyMultiColorGlow();
 });

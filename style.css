@@ -346,7 +346,7 @@ nav
   height: auto;
   backdrop-filter: brightness(40%) blur(5px);
   background-color: var(--nav-bg);
-  box-shadow: 0 0 20px var(--shadow-color);
+  box-shadow: -50px 0 0px var(--shadow-color); /* Shift shadow left with fuller blur */
   transition: 0.3s linear;
   z-index: 9;
 }
@@ -1829,4 +1829,164 @@ footer p
     overflow: auto;
     -webkit-overflow-scrolling: touch;
   }
+}
+
+/* Multi-color glow effect for About section subsection titles */
+#about-me .subsection-title.multi-color-glow,
+#education .subsection-title.multi-color-glow,
+#experience .subsection-title.multi-color-glow {
+  display: inline-block;
+  position: relative;
+  width: 100%; /* Ensure it takes full width for the border-bottom */
+}
+
+#about-me .subsection-title.multi-color-glow span,
+#education .subsection-title.multi-color-glow span,
+#experience .subsection-title.multi-color-glow span {
+  position: relative;
+  display: inline-block;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+#about-me .subsection-title.multi-color-glow span.space-char,
+#education .subsection-title.multi-color-glow span.space-char,
+#experience .subsection-title.multi-color-glow span.space-char {
+  margin-right: 0.25em;
+}
+
+/* Apply the same color patterns as the existing multi-color-glow class */
+#about-me .subsection-title.multi-color-glow span:nth-child(7n + 1):hover,
+#education .subsection-title.multi-color-glow span:nth-child(7n + 1):hover,
+#experience .subsection-title.multi-color-glow span:nth-child(7n + 1):hover {
+  color: var(--color-1);
+  text-shadow: 0 0 8px var(--color-1);
+}
+
+#about-me .subsection-title.multi-color-glow span:nth-child(7n + 2):hover,
+#education .subsection-title.multi-color-glow span:nth-child(7n + 2):hover,
+#experience .subsection-title.multi-color-glow span:nth-child(7n + 2):hover {
+  color: var(--color-2);
+  text-shadow: 0 0 8px var(--color-2);
+}
+
+#about-me .subsection-title.multi-color-glow span:nth-child(7n + 3):hover,
+#education .subsection-title.multi-color-glow span:nth-child(7n + 3):hover,
+#experience .subsection-title.multi-color-glow span:nth-child(7n + 3):hover {
+  color: var(--color-3);
+  text-shadow: 0 0 8px var(--color-3);
+}
+
+#about-me .subsection-title.multi-color-glow span:nth-child(7n + 4):hover,
+#education .subsection-title.multi-color-glow span:nth-child(7n + 4):hover,
+#experience .subsection-title.multi-color-glow span:nth-child(7n + 4):hover {
+  color: var(--color-4);
+  text-shadow: 0 0 8px var(--color-4);
+}
+
+#about-me .subsection-title.multi-color-glow span:nth-child(7n + 5):hover,
+#education .subsection-title.multi-color-glow span:nth-child(7n + 5):hover,
+#experience .subsection-title.multi-color-glow span:nth-child(7n + 5):hover {
+  color: var(--color-5);
+  text-shadow: 0 0 8px var(--color-5);
+}
+
+#about-me .subsection-title.multi-color-glow span:nth-child(7n + 6):hover,
+#education .subsection-title.multi-color-glow span:nth-child(7n + 6):hover,
+#experience .subsection-title.multi-color-glow span:nth-child(7n + 6):hover {
+  color: var(--color-6);
+  text-shadow: 0 0 8px var(--color-6);
+}
+
+#about-me .subsection-title.multi-color-glow span:nth-child(7n + 7):hover,
+#education .subsection-title.multi-color-glow span:nth-child(7n + 7):hover,
+#experience .subsection-title.multi-color-glow span:nth-child(7n + 7):hover {
+  color: var(--color-7);
+  text-shadow: 0 0 8px var(--color-7);
+}
+
+/* Make skill card text use the multi-color glow effect */
+.skill-card p {
+  margin-top: 5px;
+  color: var(--text-primary);
+  font-weight: 500;
+  position: relative;
+  display: inline-block;
+}
+
+/* Apply the multi-color glow effect to subsection titles */
+.subsection-title.multi-color-glow {
+  display: inline-block;
+  position: relative;
+  width: 100%; /* Ensure it takes full width for the border-bottom */
+}
+
+.subsection-title.multi-color-glow span {
+  position: relative;
+  display: inline-block;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+.subsection-title.multi-color-glow span.space-char {
+  margin-right: 0.25em;
+}
+
+/* Certificate title glow effect */
+.certificate-info h3 span {
+  position: relative;
+  display: inline-block;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+.certificate-info h3 span.space-char {
+  margin-right: 0.25em;
+}
+
+/* Apply the same color patterns as the existing multi-color-glow class */
+.skill-card p span:nth-child(7n + 1):hover,
+.subsection-title.multi-color-glow span:nth-child(7n + 1):hover,
+.certificate-info h3 span:nth-child(7n + 1):hover {
+  color: var(--color-1);
+  text-shadow: 0 0 8px var(--color-1);
+}
+
+.skill-card p span:nth-child(7n + 2):hover,
+.subsection-title.multi-color-glow span:nth-child(7n + 2):hover,
+.certificate-info h3 span:nth-child(7n + 2):hover {
+  color: var(--color-2);
+  text-shadow: 0 0 8px var(--color-2);
+}
+
+.skill-card p span:nth-child(7n + 3):hover,
+.subsection-title.multi-color-glow span:nth-child(7n + 3):hover,
+.certificate-info h3 span:nth-child(7n + 3):hover {
+  color: var(--color-3);
+  text-shadow: 0 0 8px var(--color-3);
+}
+
+.skill-card p span:nth-child(7n + 4):hover,
+.subsection-title.multi-color-glow span:nth-child(7n + 4):hover,
+.certificate-info h3 span:nth-child(7n + 4):hover {
+  color: var(--color-4);
+  text-shadow: 0 0 8px var(--color-4);
+}
+
+.skill-card p span:nth-child(7n + 5):hover,
+.subsection-title.multi-color-glow span:nth-child(7n + 5):hover,
+.certificate-info h3 span:nth-child(7n + 5):hover {
+  color: var(--color-5);
+  text-shadow: 0 0 8px var(--color-5);
+}
+
+.skill-card p span:nth-child(7n + 6):hover,
+.subsection-title.multi-color-glow span:nth-child(7n + 6):hover,
+.certificate-info h3 span:nth-child(7n + 6):hover {
+  color: var(--color-6);
+  text-shadow: 0 0 8px var(--color-6);
+}
+
+.skill-card p span:nth-child(7n + 7):hover,
+.subsection-title.multi-color-glow span:nth-child(7n + 7):hover,
+.certificate-info h3 span:nth-child(7n + 7):hover {
+  color: var(--color-7);
+  text-shadow: 0 0 8px var(--color-7);
 }
