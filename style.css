@@ -1287,7 +1287,7 @@ section#home
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
-  min-width: 300px; /* Ensure card is wide enough */
+  min-width: 30px; /* Ensure card is wide enough */
 }
 
 .certificate-card::before {
@@ -1332,7 +1332,7 @@ section#home
   font-size: 1.2rem;
   margin-bottom: 5px;
   color: var(--text-primary);
-  font-weight: 600;
+  font-weight: 500;
   white-space: normal; /* Allow text to wrap */
   overflow: visible; /* Show all text */
   text-overflow: clip; /* Remove ellipsis */
