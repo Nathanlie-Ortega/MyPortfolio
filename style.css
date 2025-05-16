@@ -1,8 +1,8 @@
 /* Base Styles */
 :root 
 {
+  --bg-primary: #1a0b2e;
   --bg-secondary: rgba(65, 40, 110, 0.5);
-  --bg-primary: rgb(203, 95, 137);
   --text-primary: #ffffff;
   --text-secondary: #d8c9ff;
   --accent-color: #9d7fe8;
@@ -109,7 +109,7 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-  background: var(--bg-primary); /* Match body background */
+  background: var(--color-2); /* Match body background */
 }
 
 body::-webkit-scrollbar-thumb {
@@ -2019,7 +2019,7 @@ footer p
 @supports (-webkit-touch-callout: none) {
   body {
     background-attachment: scroll;
-    min-height: 100vh; /* Ensure body can grow */
+    min-height: 50vh; /* Ensure body can grow */
     overflow-y: auto; /* Explicitly allow vertical scrolling */
     -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
     /* ADJUST THIS VALUE TO CHANGE BOTTOM PADDING ON iOS */
