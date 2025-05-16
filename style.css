@@ -1177,66 +1177,77 @@ section#home
 /* CSS Skill Card */
 #additional-skills .skill-card:nth-child(3) 
 {
+  background-image: url("paper.gif");
   background-color: #8d8989;
 }
 
 /* C Skill Card */
 #additional-skills .skill-card:nth-child(4)
  {
+  background-image: url("paper.gif");
   background-color: #20125c;
 }
 
 /* Python Skill Card */
 #additional-skills .skill-card:nth-child(5)
  {
+  background-image: url("paper.gif");
   background-color: #4d9dec;
 }
 
 /* Java Skill Card */
 #additional-skills .skill-card:nth-child(6) 
 {
+  background-image: url("paper.gif");
   background-color: #2b2f33;
 }
 
 /* HTML Skill Card */
 #additional-skills .skill-card:nth-child(7)
  {
+  background-image: url("paper.gif");
   background-color: #ce6809;
 }
 
 /* Git Skill Card */
 #tools-tech .skill-card:nth-child(1) 
 {
+  background-image: url("paper.gif");
   background-color: #130f0c;
 }
 
 /* Visual Studio Code Skill Card */
 #tools-tech .skill-card:nth-child(2)
  {
+  background-image: url("paper.gif");
   background-color: #34048b;
 }
 
 /* GitHub Skill Card */
 #tools-tech .skill-card:nth-child(3)
  {
+  background-image: url("paper.gif");
   background-color: #908aac;
 }
 
 /* Microsoft SQL Skill Card */
 #additional-tools .skill-card:nth-child(1)
  {
+  background-image: url("paper.gif");
   background-color: #b45a5a;
 }
 
 /* Jenzabar Skill Card */
 #additional-tools .skill-card:nth-child(2)
  {
+  background-image: url("paper.gif");
   background-color: #0a2bbe;
 }
 
 /* Mitel Skill Card */
 #additional-tools .skill-card:nth-child(3)
 {
+  background-image: url("paper.gif");
   background-color: #acc4f1;
 }
 

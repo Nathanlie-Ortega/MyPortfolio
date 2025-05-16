@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
           // PARTICLE MOVEMENT
           move: {
             enable: true,
-            speed: 2.5,   // Slightly faster movement
+            speed: 1.0,   // Slightly faster movement
             direction: "none",
             random: true,
             straight: false,
