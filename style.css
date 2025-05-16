@@ -2012,7 +2012,7 @@ footer p
   .page-wrapper {
     min-height: calc(100vh - var(--footer-height)); /* Account for footer height */
     /* ADJUST THIS VALUE TO CHANGE BOTTOM PADDING ON iOS */
-    padding-bottom: 50px; /* Iphone Reduced from previous large value */
+    padding-bottom: 20px; /* Iphone Reduced from previous large value */
   }
   
   /* iOS footer styling - ADJUST THESE VALUES FOR iOS FOOTER */
