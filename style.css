@@ -2022,7 +2022,7 @@ footer p
     position: relative;
     bottom: 0;
     left: 0;
-    width: 103%; /* Width for footer iphone */
+    width: 95%; /* Width for footer iphone */
     /* Add extra space below footer to ensure it's visible on Safari */
     margin-bottom: 30px; /* Reduced from previous large value */
   }
