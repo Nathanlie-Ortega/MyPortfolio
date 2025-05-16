@@ -1,8 +1,8 @@
 /* Base Styles */
 :root 
 {
-  --bg-primary: rgb(203, 95, 137);
   --bg-secondary: rgba(65, 40, 110, 0.5);
+  --bg-primary: rgb(203, 95, 137);
   --text-primary: #ffffff;
   --text-secondary: #d8c9ff;
   --accent-color: #9d7fe8;
@@ -2056,7 +2056,7 @@ footer p
     content: '';
     display: block;
     /* ADJUST THIS VALUE TO CHANGE EXTRA SPACE AT BOTTOM ON iOS */
-    height: 50px; /* Reduced from previous large value */
+    height: 0px; /* Reduced from previous large value */
     width: 100%;
   }
   
