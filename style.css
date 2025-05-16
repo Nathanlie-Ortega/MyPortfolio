@@ -1845,7 +1845,7 @@ footer p
   /* Fix for footer on mobile */
   .page-wrapper {
     /* ADJUST THIS VALUE TO CHANGE BOTTOM PADDING ON MOBILE */
-    padding-bottom: 70px; /* Reduced from previous large value */
+    padding-bottom: 20px; /* Reduced from previous large value */
   }
   
   /* Mobile footer styling - ADJUST THESE VALUES FOR MOBILE FOOTER */
