@@ -1207,37 +1207,37 @@ section#home
 /* Git Skill Card */
 #tools-tech .skill-card:nth-child(1) 
 {
-  background-color: #24292e;
+  background-color: #130f0c;
 }
 
 /* Visual Studio Code Skill Card */
 #tools-tech .skill-card:nth-child(2)
  {
-  background-color: #11476b;
+  background-color: #34048b;
 }
 
 /* GitHub Skill Card */
 #tools-tech .skill-card:nth-child(3)
  {
-  background-color: #7266b1;
+  background-color: #908aac;
 }
 
 /* Microsoft SQL Skill Card */
 #additional-tools .skill-card:nth-child(1)
  {
-  background-color: #6b5c5c;
+  background-color: #b45a5a;
 }
 
 /* Jenzabar Skill Card */
 #additional-tools .skill-card:nth-child(2)
  {
-  background-color: #1e6492;
+  background-color: #0a2bbe;
 }
 
 /* Mitel Skill Card */
 #additional-tools .skill-card:nth-child(3)
 {
-  background-color: #346bca;
+  background-color: #acc4f1;
 }
 
 .skill-card:hover 
@@ -2013,56 +2013,4 @@ footer p
 .certificate-info h3 span:nth-child(7n + 7):hover {
   color: var(--color-7);
   text-shadow: 0 0 8px var(--color-7);
-}
-
-/* iOS specific fixes */
-@supports (-webkit-touch-callout: none) {
-  body {
-    background-attachment: scroll;
-    min-height: 50vh; /* Ensure body can grow */
-    overflow-y: auto; /* Explicitly allow vertical scrolling */
-    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
-    /* ADJUST THIS VALUE TO CHANGE BOTTOM PADDING ON iOS */
-    padding-bottom: 20px; /* Reduced from previous large value */
-  } 
-  
-  html, body {
-    position: relative;
-    overflow: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-  
-  /* Additional iOS footer fix */
-  .page-wrapper {
-    min-height: calc(100vh - var(--footer-height)); /* Account for footer height */
-    /* ADJUST THIS VALUE TO CHANGE BOTTOM PADDING ON iOS */
-    padding-bottom: 50px; /* Iphone Reduced from previous large value */
-  }
-  
-  /* iOS footer styling - ADJUST THESE VALUES FOR iOS FOOTER */
-  footer {
-    height: auto;
-    min-height: var(--footer-height);
-    position: relative;
-    bottom: 0;
-    left: 0;
-    width: 103%; /* Width for footer iphone */
-    /* Add extra space below footer to ensure it's visible on Safari */
-    margin-bottom: 0px; /* Reduced from previous large value */
-  }
-  
-  /* Add extra space at the bottom of the page to ensure scrollability */
-  body::after {
-    content: '';
-    display: block;
-    /* ADJUST THIS VALUE TO CHANGE EXTRA SPACE AT BOTTOM ON iOS */
-    height: 0px; /* Reduced from previous large value */
-    width: 100%;
-  }
-  
-  /* Ensure the last section has enough padding to scroll past Safari UI */
-  section:last-of-type {
-    /* ADJUST THIS VALUE TO CHANGE LAST SECTION PADDING ON iOS */
-    margin-bottom: 50px; /* Reduced from previous large value */
-  }
 }
