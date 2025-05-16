@@ -50,6 +50,15 @@
   
   /* Navigation height for scroll padding */
   --nav-height: 10vh;
+  
+  /* Footer height for padding calculations - ADJUST THIS VALUE TO CHANGE FOOTER SIZE */
+  --footer-height: 100px; /* Increased from 80px for bigger footer */
+  
+  /* Safari bottom bar height - ADJUST THIS VALUE BASED ON YOUR DEVICE */
+  --safari-bottom-bar: 80px; /* Reduced from 100px for less padding */
+  
+  /* Bottom padding for scrollability - ADJUST THIS FOR MORE/LESS SCROLL SPACE */
+  --bottom-scroll-padding: 20px;
 }
 
 /* Reset and Base Styles */
@@ -86,6 +95,8 @@ body {
   display: flex;
   flex-direction: column;
   transition: background-image 0.3s ease-in; /* Smooth transition for background image */
+  /* Reduced padding for less space at bottom */
+  padding-bottom: var(--bottom-scroll-padding);
 }
 
 /* Class added when background is loaded */
@@ -103,6 +114,8 @@ body.background-loaded {
   display: flex;
   flex-direction: column;
   justify-content: space-between; /* This ensures footer stays at bottom */
+  /* Reduced padding for less space at bottom */
+  padding-bottom: var(--bottom-scroll-padding);
 }
 
 h1,
@@ -122,6 +135,7 @@ html
   scroll-behavior: smooth;
   scroll-padding-top: calc(var(--nav-height) + 20px); /* Increased to prevent titles from being hidden under nav */
   overscroll-behavior: none; /* Prevent bounce effect */
+  height: 100%; /* Ensure html takes full height */
 }
 
 .container 
@@ -1561,23 +1575,34 @@ section#home
 
 
 /* Footer */
+/* FOOTER STYLING - ADJUST THESE VALUES TO CHANGE FOOTER SIZE AND APPEARANCE */
 footer 
 {
   background-color: var(--nav-bg);
-  padding: 30px 0;
+  /* Adjust padding to make footer taller or shorter */
+  padding: 40px 0; /* Increased from 30px for taller footer */
   text-align: center;
   margin-top: 30px;
-  min-height: 60px;
+  /* Adjust min-height to make footer taller or shorter */
+  min-height: var(--footer-height); /* Uses the CSS variable you can adjust at the top */
   width: 100%;
   flex-shrink: 0; /* Prevent footer from shrinking */
   position: relative; /* Ensure footer is positioned properly */
   z-index: 5; /* Ensure footer is above other elements */
+  /* Add a border to make footer more visible */
+  border-top: 3px solid var(--color-6); /* Added border for visibility */
+  /* Add box shadow for more prominence */
+  box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.2); /* Added shadow for visibility */
 }
 
+/* Footer content styling - adjust to make text more visible */
 footer p 
 {
   color: var(--text-secondary);
-  font-size: 0.9rem;
+  font-size: 1rem; /* Increased from 0.9rem for better visibility */
+  font-weight: 500; /* Added font weight for better visibility */
+  /* Add text shadow for better visibility */
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
 /* Animation Classes and Transitions */
@@ -1819,17 +1844,20 @@ footer p
   
   /* Fix for footer on mobile */
   .page-wrapper {
-    padding-bottom: 60px; /* Add padding to ensure content doesn't overlap footer */
+    /* ADJUST THIS VALUE TO CHANGE BOTTOM PADDING ON MOBILE */
+    padding-bottom: 70px; /* Reduced from previous large value */
   }
   
+  /* Mobile footer styling - ADJUST THESE VALUES FOR MOBILE FOOTER */
   footer {
     position: relative;
     bottom: 0;
     left: 0;
     width: 100%;
-    padding: 20px 0;
-    margin-top: -40px;
-    margin-bottom: 0;
+    padding: 30px 0; /* Adjust padding for mobile */
+    margin-top: 30px;
+    margin-bottom: 0; /* Removed margin bottom */
+    min-height: 120px; /* Footer box height for mobile */
   }
 }
 
@@ -1840,7 +1868,9 @@ footer p
     min-height: 100vh; /* Ensure body can grow */
     overflow-y: auto; /* Explicitly allow vertical scrolling */
     -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
-  }
+    /* ADJUST THIS VALUE TO CHANGE BOTTOM PADDING ON iOS */
+    padding-bottom: 50px; /* Reduced from previous large value */
+  } 
   
   html, body {
     position: relative;
@@ -1850,15 +1880,35 @@ footer p
   
   /* Additional iOS footer fix */
   .page-wrapper {
-    min-height: calc(100vh - 60px); /* Account for footer height */
+    min-height: calc(100vh - var(--footer-height)); /* Account for footer height */
+    /* ADJUST THIS VALUE TO CHANGE BOTTOM PADDING ON iOS */
+    padding-bottom: 50px; /* Reduced from previous large value */
   }
   
+  /* iOS footer styling - ADJUST THESE VALUES FOR iOS FOOTER */
   footer {
     height: auto;
-    min-height: 60px;
+    min-height: var(--footer-height);
     position: relative;
     bottom: 0;
     left: 0;
     width: 100%;
+    /* Add extra space below footer to ensure it's visible on Safari */
+    margin-bottom: 30px; /* Reduced from previous large value */
+  }
+  
+  /* Add extra space at the bottom of the page to ensure scrollability */
+  body::after {
+    content: '';
+    display: block;
+    /* ADJUST THIS VALUE TO CHANGE EXTRA SPACE AT BOTTOM ON iOS */
+    height: 50px; /* Reduced from previous large value */
+    width: 100%;
+  }
+  
+  /* Ensure the last section has enough padding to scroll past Safari UI */
+  section:last-of-type {
+    /* ADJUST THIS VALUE TO CHANGE LAST SECTION PADDING ON iOS */
+    margin-bottom: 50px; /* Reduced from previous large value */
   }
 }
