@@ -1130,9 +1130,8 @@ section#home
   margin-top: 20px;
 }
 
-.skill-card 
-{
-  background-color: var(--card-bg);
+.skill-card {
+  background: var(--card-bg);
   padding: 15px;
   border-radius: 8px;
   text-align: center;
@@ -1140,132 +1139,211 @@ section#home
   transition: all 0.3s ease;
   position: relative;
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
-  background-blend-mode: overlay;
 }
+
 
 /* C++ Skill Card */
 .skill-card:nth-child(1)
 {
-  background-image: url("skillsImages/C++B.jpg");
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("skillsImages/C++B.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 /* C# Skill Card */
 .skill-card:nth-child(2) 
 {
-  background-image: url("skillsImages/C2B.jpg");
+    background:
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("skillsImages/C2B.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 /* React Skill Card */
 .skill-card:nth-child(3) 
 {
-  background-image: url("skillsImages/ReactB.jpg");
+    background:
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("skillsImages/ReactB.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 /* Node.js Skill Card */
 #additional-skills .skill-card:nth-child(1) 
 {
-  background-image: #035339;
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
   background-color: #035339;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  
 }
 
-/* JavaScript Skill Card */
-#additional-skills .skill-card:nth-child(2)
- {
-  background-image: url("skillsImages/JavaScriptB.jpg");
+/* Example: JavaScript Skill Card */
+#additional-skills .skill-card:nth-child(2) {
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+    url("skillsImages/JavaScriptB.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 /* CSS Skill Card */
 #additional-skills .skill-card:nth-child(3) 
 {
-  background-image: #8d8989;
+    background: 
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
   background-color: #8d8989;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
 }
 
 /* C Skill Card */
 #additional-skills .skill-card:nth-child(4)
  {
-  background-image: #20125c;
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
   background-color: #20125c;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  
 }
 
 /* Python Skill Card */
-#additional-skills .skill-card:nth-child(5)
- {
-  background-image: #4d9dec;
+#additional-skills .skill-card:nth-child(5) {
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
   background-color: #4d9dec;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 /* Java Skill Card */
 #additional-skills .skill-card:nth-child(6) 
 {
-  background-image: #2b2f33;
+  background-image: url("paper.gif");
   background-color: #2b2f33;
 }
 
 /* HTML Skill Card */
 #additional-skills .skill-card:nth-child(7)
  {
-  background-image: #ce6809;
-  background-color: #ce6809;
-}
+    background: 
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+  background-color:  #ce6809;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 
-/* Reset for skill cards */
-.skill-card {
-  background: none;
-  background-color: transparent;
 }
 
 /* Git Skill Card */
-#tools-tech .skill-card:nth-child(1) {
+#tools-tech .skill-card:nth-child(1) 
+{
+    background: 
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
   background-color: #130f0c;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
 }
 
 /* Visual Studio Code Skill Card */
-#tools-tech .skill-card:nth-child(2) {
+#tools-tech .skill-card:nth-child(2)
+ {
+    background: 
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
   background-color: #34048b;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
 }
 
 /* GitHub Skill Card */
-#tools-tech .skill-card:nth-child(3) {
-  background-color: #948bb3;
+#tools-tech .skill-card:nth-child(3)
+ {
+    background: 
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+  background-color: #a799db;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
 }
 
 /* Microsoft SQL Skill Card */
-#additional-tools .skill-card:nth-child(1) {
-  background-color: #ce321e;
+#additional-tools .skill-card:nth-child(1)
+ {
+    background: 
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+  background-color:  #cfa005;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
 }
 
 /* Jenzabar Skill Card */
-#additional-tools .skill-card:nth-child(2) {
-  background-color: #4060f0;
+#additional-tools .skill-card:nth-child(2)
+ {
+    background: 
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+  background-color: #2e51ec;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
 }
 
 /* Mitel Skill Card */
-#additional-tools .skill-card:nth-child(3) {
-  background-color: #8ba4d3;
+#additional-tools .skill-card:nth-child(3)
+{
+    background: 
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+  background-color: #b9cdf1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
 }
 
-/* Ensure mobile consistency */
-@media (max-width: 768px) {
-  #tools-tech .skill-card:nth-child(1) {
-    background-color: #130f0c;
-  }
-  #tools-tech .skill-card:nth-child(2) {
-    background-color: #34048b;
-  }
-  #tools-tech .skill-card:nth-child(3) {
-    background-color: #948bb3;
-  }
-  #additional-tools .skill-card:nth-child(1) {
-    background-color: #ce321e;
-  }
-  #additional-tools .skill-card:nth-child(2) {
-    background-color: #4060f0;
-  }
-  #additional-tools .skill-card:nth-child(3) {
-    background-color: #8ba4d3;
-  }
+
+.skill-card:hover {
+  transform: scale(1.1) translateY(-5px);
+  box-shadow: 0 10px 20px var(--shadow-color);
+}
+
+.skill-icon {
+  width: 60px;
+  margin: 0 auto;
+  padding: 5px 0;
+}
+
+.skill-icon img {
+  width: 100%;
+}
+
+.skill-card p {
+  margin-top: 5px;
+  color: var(--text-primary);
+  font-weight: 500;
 }
 
 .skill-card:hover 
