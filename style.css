@@ -1845,7 +1845,7 @@ footer p
   /* Fix for footer on mobile */
   .page-wrapper {
     /* ADJUST THIS VALUE TO CHANGE BOTTOM PADDING ON MOBILE */
-    padding-bottom: 20px; /* Reduced large spaces below for mobile */
+    padding-bottom: 0px; /* Reduced large spaces below for mobile */
   }
   
   /* Mobile footer styling - ADJUST THESE VALUES FOR MOBILE FOOTER */
@@ -1882,7 +1882,7 @@ footer p
   .page-wrapper {
     min-height: calc(100vh - var(--footer-height)); /* Account for footer height */
     /* ADJUST THIS VALUE TO CHANGE BOTTOM PADDING ON iOS */
-    padding-bottom: 50px; /* Reduced from previous large value */
+    padding-bottom: 30px; /* Reduced from previous large value */
   }
   
   /* iOS footer styling - ADJUST THESE VALUES FOR iOS FOOTER */
