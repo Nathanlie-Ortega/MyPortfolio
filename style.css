@@ -1685,14 +1685,15 @@ section#home
 
 
 /* Footer */
-footer {
+footer 
+{
   background-color: var(--nav-bg);
   padding: 30px 0;
   text-align: center;
   margin-top: 30px;
   min-height: 60px;
   width: 100%;
-  flex-shrink: 0;
+  flex-shrink: 0; /* Prevent footer from shrinking */
 }
 
 footer p 
@@ -1950,7 +1951,8 @@ footer p
   
   html, body {
     position: relative;
-    overflow: hidden;
+    overflow: auto;
+    overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
   }
 }
