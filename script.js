@@ -378,7 +378,7 @@ function fixIOSBackground() {
   }
 }
 
-// Preload background image to prevent flash
+// Enhanced preload background image to prevent flash
 function preloadBackgroundImage() {
   // Create a new image element
   const img = new Image();
@@ -386,17 +386,26 @@ function preloadBackgroundImage() {
   // Set up the onload handler
   img.onload = function() {
     // Once the image is loaded, apply it to the body
-    document.body.style.backgroundImage = `url('backgroundImages/Background.jpg')`;
     document.body.classList.add('background-loaded');
+    console.log('Background image loaded successfully');
   };
   
-  // Set the source to trigger loading
+  // Set up error handler
+  img.onerror = function() {
+    console.error('Failed to load background image');
+    // Apply a fallback background color
+    document.body.style.backgroundColor = '#1a0b2e';
+  };
+  
+  // Start loading the image
   img.src = 'backgroundImages/Background.jpg';
 }
 
 // Initialize everything when DOM is loaded
 document.addEventListener("DOMContentLoaded", () => 
 {
+  console.log('DOM loaded, initializing...');
+  
   // Preload background image first
   preloadBackgroundImage();
   
@@ -417,4 +426,15 @@ document.addEventListener("DOMContentLoaded", () =>
 
   // Note: We've moved the particles setup to a separate file
   // for better organization and troubleshooting
+});
+
+// Add window load event to ensure everything is fully loaded
+window.addEventListener('load', function() {
+  console.log('Window fully loaded');
+  
+  // If background image hasn't loaded by now, force it
+  if (!document.body.classList.contains('background-loaded')) {
+    console.log('Forcing background image load');
+    document.body.classList.add('background-loaded');
+  }
 });

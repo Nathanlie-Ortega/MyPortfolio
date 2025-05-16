@@ -74,8 +74,10 @@ html, body
   overscroll-behavior: none; /* Prevent bounce effect */
 }
 
+/* Important: Set background color immediately to prevent flash */
 body {
-  background-image: url("backgroundImages/Background.jpg");
+  background-color: var(--bg-primary) !important; /* Use !important to ensure this takes precedence */
+  background-image: none; /* Start with no background image */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -83,6 +85,12 @@ body {
   min-height: 100vh; /* Ensure body takes at least full viewport height */
   display: flex;
   flex-direction: column;
+  transition: background-image 0.3s ease-in; /* Smooth transition for background image */
+}
+
+/* Class added when background is loaded */
+body.background-loaded {
+  background-image: url("backgroundImages/Background.jpg");
 }
 
 /* Page wrapper to contain all content */
@@ -1133,7 +1141,6 @@ section#home
 /* Node.js Skill Card */
 #additional-skills .skill-card:nth-child(1) 
 {
-  background-image: url("paper.gif");
   background-color: #035339;
 }
 
@@ -1146,77 +1153,66 @@ section#home
 /* CSS Skill Card */
 #additional-skills .skill-card:nth-child(3) 
 {
-  background-image: url("paper.gif");
   background-color: #8d8989;
 }
 
 /* C Skill Card */
 #additional-skills .skill-card:nth-child(4)
  {
-  background-image: url("paper.gif");
   background-color: #20125c;
 }
 
 /* Python Skill Card */
 #additional-skills .skill-card:nth-child(5)
  {
-  background-image: url("paper.gif");
   background-color: #4d9dec;
 }
 
 /* Java Skill Card */
 #additional-skills .skill-card:nth-child(6) 
 {
-  background-image: url("paper.gif");
   background-color: #2b2f33;
 }
 
 /* HTML Skill Card */
 #additional-skills .skill-card:nth-child(7)
  {
-  background-image: url("paper.gif");
   background-color: #ce6809;
 }
 
 /* Git Skill Card */
 #tools-tech .skill-card:nth-child(1) 
 {
-  background-image: url("paper.gif");
   background-color: #24292e;
 }
 
 /* Visual Studio Code Skill Card */
 #tools-tech .skill-card:nth-child(2)
  {
-  background-image: url("paper.gif");
   background-color: #11476b;
 }
 
 /* GitHub Skill Card */
 #tools-tech .skill-card:nth-child(3)
  {
-  background-image: url("paper.git");
   background-color: #7266b1;
 }
 
 /* Microsoft SQL Skill Card */
 #additional-tools .skill-card:nth-child(1)
  {
-  background-image: url("paper.git");
   background-color: #6b5c5c;
 }
 
 /* Jenzabar Skill Card */
 #additional-tools .skill-card:nth-child(2)
  {
-  background-image: url("paper.git");
   background-color: #1e6492;
 }
 
 /* Mitel Skill Card */
 #additional-tools .skill-card:nth-child(3)
 {
-  background-image: url("paper.git");
   background-color: #346bca;
 }
 

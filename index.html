@@ -23,19 +23,15 @@
             min-height: 100vh;
             display: flex;
             flex-direction: column;
+            background-color: #1a0b2e !important; /* Force background color */
         }
         
-        /* Preload the background image */
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 1px;
-            height: 1px;
+        /* Class added when background is loaded */
+        body.background-loaded {
             background-image: url("backgroundImages/Background.jpg");
-            opacity: 0.01;
-            z-index: -1;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
         }
         
         /* Ensure footer is always visible */
@@ -48,6 +44,39 @@
         footer {
             flex-shrink: 0;
         }
+        
+        /* Loading indicator */
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #1a0b2e;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease-out;
+        }
+        
+        .loading-spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: #c7568c;
+            animation: spin 1s ease-in-out infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        .loading-overlay.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
     </style>
     
     <link rel="stylesheet" href="style.css">
@@ -57,6 +86,11 @@
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
 </head>
 <body>
+    <!-- Loading overlay -->
+    <div class="loading-overlay" id="loading-overlay">
+        <div class="loading-spinner"></div>
+    </div>
+    
     <!-- tsParticles container -->
     <div id="tsparticles"></div>
     
@@ -346,7 +380,7 @@
                     </div>
 
                     <div class="project-card animated slide-up animated-border" data-delay="600">
-                        <img src="https://via.placeholder.com/300x200" alt="Pomodoro Website Future Project">
+                        <img src="https://github.com/Nathanlie-Ortega/GraphAdjacencyWalkAnalyzer" alt="Pomodoro Website Future Project">
                         <div class="project-info">
                             <h3>Pomodoro Website Future Project</h3>
                             <p>Interactive data visualization dashboard for time management using the Pomodoro technique.</p>
@@ -527,7 +561,7 @@
                         <!-- Microsoft SQL Skill -->
                         <div class="skill-card animated slide-left animated-border" data-delay="1000">
                             <div class="skill-icon">
-                                <img src="skillsImages/SQL.png" alt="Linux icon">
+                                <img src="skillsImages/SQL.png" alt="SQL icon">
                             </div>
                             <p>Microsoft SQL Server</p>
                         </div>
@@ -535,7 +569,7 @@
                         <!-- Jenzabar -->
                         <div class="skill-card animated slide-left animated-border" data-delay="1000">
                             <div class="skill-icon">
-                                <img src="skillsImages/Jenzabar.png" alt="Linux icon">
+                                <img src="skillsImages/Jenzabar.png" alt="Jenzabar icon">
                             </div>
                             <p>Jenzabar</p>
                         </div>
@@ -543,7 +577,7 @@
                         <!-- Mitel -->
                         <div class="skill-card animated slide-left animated-border" data-delay="1000">
                             <div class="skill-icon">
-                                <img src="skillsImages/Mitel.png" alt="Linux icon">
+                                <img src="skillsImages/Mitel.png" alt="Mitel icon">
                             </div>
                             <p>Mitel</p>
                         </div>
@@ -682,7 +716,7 @@
                         <span class="close-modal">&times;</span>
                         <h2 id="modal-title">Certificate</h2>
                         <div class="certificate-display">
-                            <iframe id="certificate-frame" src="/placeholder.svg" frameborder="0"></iframe>
+                            <iframe id="certificate-frame" src="assets/placeholder.svg" frameborder="0"></iframe>
                         </div>
                     </div>
                 </div>
@@ -749,6 +783,19 @@
         </footer>
     </div>
 
+    <script>
+        // Hide loading overlay when page is fully loaded
+        window.addEventListener('load', function() {
+            const loadingOverlay = document.getElementById('loading-overlay');
+            if (loadingOverlay) {
+                loadingOverlay.classList.add('hidden');
+                setTimeout(() => {
+                    loadingOverlay.style.display = 'none';
+                }, 500);
+            }
+        });
+    </script>
+    
     <script src="script.js"></script>
     
     <!-- Add a separate particles script file -->
