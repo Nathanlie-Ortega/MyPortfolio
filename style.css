@@ -1210,46 +1210,62 @@ section#home
   background-color: #ce6809;
 }
 
+/* Reset for skill cards */
+.skill-card {
+  background: none;
+  background-color: transparent;
+}
+
 /* Git Skill Card */
-#tools-tech .skill-card:nth-child(1) 
-{
-  background-image: #5a4b3f;
+#tools-tech .skill-card:nth-child(1) {
   background-color: #130f0c;
 }
 
 /* Visual Studio Code Skill Card */
-#tools-tech .skill-card:nth-child(2)
- {
-  background-image: #34048b;
+#tools-tech .skill-card:nth-child(2) {
   background-color: #34048b;
 }
 
 /* GitHub Skill Card */
-#tools-tech .skill-card:nth-child(3)
- {
-  background-image: #948bb3;
+#tools-tech .skill-card:nth-child(3) {
   background-color: #948bb3;
 }
 
 /* Microsoft SQL Skill Card */
-#additional-tools .skill-card:nth-child(1)
- {
-  background-image: #ce321e;
+#additional-tools .skill-card:nth-child(1) {
   background-color: #ce321e;
 }
 
 /* Jenzabar Skill Card */
-#additional-tools .skill-card:nth-child(2)
- {
-  background-image: #4060f0;
+#additional-tools .skill-card:nth-child(2) {
   background-color: #4060f0;
 }
 
 /* Mitel Skill Card */
-#additional-tools .skill-card:nth-child(3)
-{
-  background-image: #8ba4d3;
+#additional-tools .skill-card:nth-child(3) {
   background-color: #8ba4d3;
+}
+
+/* Ensure mobile consistency */
+@media (max-width: 768px) {
+  #tools-tech .skill-card:nth-child(1) {
+    background-color: #130f0c;
+  }
+  #tools-tech .skill-card:nth-child(2) {
+    background-color: #34048b;
+  }
+  #tools-tech .skill-card:nth-child(3) {
+    background-color: #948bb3;
+  }
+  #additional-tools .skill-card:nth-child(1) {
+    background-color: #ce321e;
+  }
+  #additional-tools .skill-card:nth-child(2) {
+    background-color: #4060f0;
+  }
+  #additional-tools .skill-card:nth-child(3) {
+    background-color: #8ba4d3;
+  }
 }
 
 .skill-card:hover 
