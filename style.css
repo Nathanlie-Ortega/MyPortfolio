@@ -1845,7 +1845,7 @@ footer p
   /* Fix for footer on mobile */
   .page-wrapper {
     /* ADJUST THIS VALUE TO CHANGE BOTTOM PADDING ON MOBILE */
-    padding-bottom: 2px; /* Reduced large spaces below for mobile */
+    padding-bottom: 20px; /* Reduced large spaces below for mobile */
   }
   
   /* Mobile footer styling - ADJUST THESE VALUES FOR MOBILE FOOTER */
@@ -1853,8 +1853,8 @@ footer p
     position: relative;
     bottom: 0;
     left: 0;
-    width: 103%;
-    padding: 30px 0; /* Adjust padding for mobile */
+    width: 103%;  /*Width for mobiles regular */
+    padding: 60px 0; /* Adjust padding for mobile */
     margin-top: 30px;
     margin-bottom: 0; /* Removed margin bottom */
     min-height: 120px; /* Footer box height for mobile */
@@ -1892,7 +1892,7 @@ footer p
     position: relative;
     bottom: 0;
     left: 0;
-    width: 80%;
+    width: 103%; /* Width for footer iphone */
     /* Add extra space below footer to ensure it's visible on Safari */
     margin-bottom: 30px; /* Reduced from previous large value */
   }
