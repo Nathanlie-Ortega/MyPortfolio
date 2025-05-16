@@ -92,8 +92,8 @@ body {
 body.background-loaded {
   background-image: url("backgroundImages/Background.jpg");
   background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-position: right 35% bottom 45%;
+  background-repeat: repeat;
 }
 
 @media (min-width: 885px) {
@@ -1269,8 +1269,7 @@ section#home
 
 
 /* Certificates Section */
-.certificates-grid 
-{
+.certificates-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
@@ -1278,21 +1277,20 @@ section#home
   margin-top: 20px;
 }
 
-.certificate-card 
-{
+.certificate-card {
   background-color: var(--card-bg);
   padding: 20px;
   border-radius: 8px;
   display: flex;
-  align-items: center;
+  align-items: flex-start; /* Align to top for wrapped text */
   box-shadow: 0 0 10px var(--shadow-color);
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+  min-width: 300px; /* Ensure card is wide enough */
 }
 
-.certificate-card::before 
-{
+.certificate-card::before {
   content: "";
   position: absolute;
   top: -2px;
@@ -1310,52 +1308,48 @@ section#home
   z-index: -1;
 }
 
-.certificate-card:hover 
-{
+.certificate-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 10px 20px var(--shadow-color);
 }
 
-.certificate-card:hover::before 
-{
+.certificate-card:hover::before {
   opacity: 1;
 }
 
-.certificate-icon 
-{
+.certificate-icon {
   font-size: 2.5rem;
   color: var(--color-2);
   margin-right: 15px;
   cursor: pointer;
 }
 
-.view-certificate-trigger 
-{
+.view-certificate-trigger {
   cursor: pointer;
 }
 
-.certificate-info h3 
-{
+.certificate-info h3 {
   font-size: 1.2rem;
   margin-bottom: 5px;
   color: var(--text-primary);
   font-weight: 600;
+  white-space: normal; /* Allow text to wrap */
+  overflow: visible; /* Show all text */
+  text-overflow: clip; /* Remove ellipsis */
+  width: 110%; /* Keep full width */
 }
 
-.certificate-info p 
-{
+.certificate-info p {
   color: var(--text-secondary);
 }
 
-.certificate-date 
-{
+.certificate-date {
   font-style: italic;
   color: var(--text-secondary);
   margin-top: 5px;
 }
 
-.view-certificate 
-{
+.view-certificate {
   display: inline-block;
   margin-top: 10px;
   color: var(--color-2);
@@ -1364,14 +1358,15 @@ section#home
   cursor: pointer;
 }
 
-.credential-link 
-{
+.credential-link {
   display: block;
   margin-top: 10px;
   color: var(--color-2);
   font-size: 0.9rem;
   text-decoration: underline;
 }
+
+
 
 /* Certificate Modal */
 .modal 
