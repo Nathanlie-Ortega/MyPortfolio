@@ -378,21 +378,28 @@ function fixIOSBackground() {
   }
 }
 
+// Preload background image to prevent flash
+function preloadBackgroundImage() {
+  // Create a new image element
+  const img = new Image();
+  
+  // Set up the onload handler
+  img.onload = function() {
+    // Once the image is loaded, apply it to the body
+    document.body.style.backgroundImage = `url('backgroundImages/Background.jpg')`;
+    document.body.classList.add('background-loaded');
+  };
+  
+  // Set the source to trigger loading
+  img.src = 'backgroundImages/Background.jpg';
+}
+
 // Initialize everything when DOM is loaded
 document.addEventListener("DOMContentLoaded", () => 
 {
-
-  var backgroundImage = new Image();
-    backgroundImage.src = '/backgroundImages/background.jpg';
-    backgroundImage.onload = function() {
-        document.body.style.backgroundImage = 'url(/backgroundImages/Background.jpg)';
-    };
-
-
-
-
-
-
+  // Preload background image first
+  preloadBackgroundImage();
+  
   // Fix for iOS background
   fixIOSBackground();
   
