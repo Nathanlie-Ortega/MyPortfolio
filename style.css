@@ -1990,3 +1990,55 @@ footer p
   color: var(--color-7);
   text-shadow: 0 0 8px var(--color-7);
 }
+
+/* iOS specific fixes */
+@supports (-webkit-touch-callout: none) {
+  body {
+    background-attachment: scroll;
+    min-height: 100vh; /* Ensure body can grow */
+    overflow-y: auto; /* Explicitly allow vertical scrolling */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    /* ADJUST THIS VALUE TO CHANGE BOTTOM PADDING ON iOS */
+    padding-bottom: 20px; /* Reduced from previous large value */
+  } 
+  
+  html, body {
+    position: relative;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  /* Additional iOS footer fix */
+  .page-wrapper {
+    min-height: calc(100vh - var(--footer-height)); /* Account for footer height */
+    /* ADJUST THIS VALUE TO CHANGE BOTTOM PADDING ON iOS */
+    padding-bottom: 20px; /* Iphone Reduced from previous large value */
+  }
+  
+  /* iOS footer styling - ADJUST THESE VALUES FOR iOS FOOTER */
+  footer {
+    height: auto;
+    min-height: var(--footer-height);
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 103%; /* Width for footer iphone */
+    /* Add extra space below footer to ensure it's visible on Safari */
+    margin-bottom: 30px; /* Reduced from previous large value */
+  }
+  
+  /* Add extra space at the bottom of the page to ensure scrollability */
+  body::after {
+    content: '';
+    display: block;
+    /* ADJUST THIS VALUE TO CHANGE EXTRA SPACE AT BOTTOM ON iOS */
+    height: 50px; /* Reduced from previous large value */
+    width: 100%;
+  }
+  
+  /* Ensure the last section has enough padding to scroll past Safari UI */
+  section:last-of-type {
+    /* ADJUST THIS VALUE TO CHANGE LAST SECTION PADDING ON iOS */
+    margin-bottom: 50px; /* Reduced from previous large value */
+  }
+}
