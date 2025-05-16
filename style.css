@@ -55,10 +55,10 @@
   --footer-height: 100px; /* Increased from 80px for bigger footer */
   
   /* Safari bottom bar height - ADJUST THIS VALUE BASED ON YOUR DEVICE */
-  --safari-bottom-bar: 80px; /* Reduced from 100px for less padding */
+  --safari-bottom-bar: 50px; /* Reduced from 100px for less padding */
   
   /* Bottom padding for scrollability - ADJUST THIS FOR MORE/LESS SCROLL SPACE */
-  --bottom-scroll-padding: 20px;
+  --bottom-scroll-padding: 0px;
 }
 
 /* Reset and Base Styles */
@@ -1869,7 +1869,7 @@ footer p
     overflow-y: auto; /* Explicitly allow vertical scrolling */
     -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
     /* ADJUST THIS VALUE TO CHANGE BOTTOM PADDING ON iOS */
-    padding-bottom: 50px; /* Reduced from previous large value */
+    padding-bottom: 20px; /* Reduced from previous large value */
   } 
   
   html, body {
